@@ -1,0 +1,6 @@
+name: "units-mod"
+description: "Adds a new fractions of units like: Snow, Electrical, Spore, Blade, Averaged, Upgraded."
+displayName: "Units Mod"
+author: "Snake"
+minGameVersion: "126.2"
+version: "1.0"
