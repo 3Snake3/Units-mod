@@ -151,7 +151,7 @@ research: {
 parent: discharge
 requirements: [
 silicon/45000
-creostone/40000
+thorium/40000
 titanium/34000
 metaglass/30000
 plastanium/29000

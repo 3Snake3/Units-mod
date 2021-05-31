@@ -96,7 +96,7 @@ research: {
 parent: zenith
 requirements: [
 titanium/10000
-creostone/10000
+silicon/10000
 metaglass/8000
 thorium/8000
 plastanium/6000

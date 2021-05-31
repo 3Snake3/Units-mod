@@ -27,7 +27,7 @@ research: {
 parent: dagger
 requirements: [
 graphite/8000
-creostone/8000
+silicon/8000
 titanium/7500
 metaglass/5500
 plastanium/3500

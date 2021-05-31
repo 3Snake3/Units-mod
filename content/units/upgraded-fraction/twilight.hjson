@@ -111,7 +111,7 @@ damage: 50
 parent: antumbra
 requirements: [
 titanium/30000
-creostone/30000
+silicon/30000
 metaglass/21000
 thorium/17000
 plastanium/13000

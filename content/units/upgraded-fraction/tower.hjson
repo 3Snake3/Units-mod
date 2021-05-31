@@ -59,7 +59,7 @@ parent: fortress
 requirements: [
 lead/30000
 graphite/28000
-creostone/25000
+silicon/25000
 titanium/25000
 thorium/20000
 ]

@@ -100,7 +100,7 @@ research: {
 parent: lightning
 requirements: [
 silicon/28000
-creostone/20000
+thorium/20000
 titanium/17000
 metaglass/12000
 surge-alloy/23000
