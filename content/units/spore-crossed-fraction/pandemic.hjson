@@ -42,7 +42,7 @@ frontColor: bf92f9
                     fragBullets: 2
                     fragLifeMin: 0
                     fragCone: 30
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 75
                     fragBullet: {
 type: BasicBulletType
@@ -59,7 +59,7 @@ damage: 18
                         despawnEffect: sapExplosion
                         splashDamage: 20
                         splashDamageRadius: 20
-                        status: sporeSlowed
+                        status: spore-slowed
 statusDuration: 80
                         lightning: 1
                 lightningLength: 4
@@ -137,7 +137,7 @@ statusDuration: 120
                 lightningLength: 3
                 lightningDamage: 5
                 lightningColor: bf92f9
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 75
                 }
                 }

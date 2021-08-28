@@ -23,7 +23,7 @@ range: 100
                 shots: 3
                 inaccuracy: 3
                 shotDelay: 4
-                shootStatus: sporeSlowed
+                shootStatus: spore-slowed
                 shootStatusDuration: 80
                 bullet: {
 type: BasicBulletType

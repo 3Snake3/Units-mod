@@ -19,7 +19,7 @@ smokeEffect: shootSmallSmoke
 ammoMultiplier: 2
 backColor: 6d56bf
 frontColor: bf92f9
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 60
 }
 }

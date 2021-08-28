@@ -45,7 +45,7 @@ hitEffect: sapExplosion
 despawnEffect: sapExplosion
 backColor: 6d56bf
 frontColor: bf92f9
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 65
 }
 }]

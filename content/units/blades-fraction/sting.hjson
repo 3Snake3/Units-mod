@@ -71,7 +71,7 @@ frontColor: bf92f9
 trailColor: 6d56bf
 splashDamage: 10
 splashDamageRadius: 20
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 65
 }
 }]

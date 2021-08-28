@@ -35,7 +35,7 @@ splashDamage: 38
 backColor: 6d56bf
 frontColor: bf92f9
 hitShake: 2
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 60
 fragBullets: 4
 fragLifeMin: 0.3

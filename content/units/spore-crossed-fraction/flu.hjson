@@ -10,9 +10,31 @@ shootY: 2
 reload: 14
 recoil: 1
 ejectEffect: none
-bullet: pyraFlame
-shootStatus: sporeSlowed
-shootStatusDuration: 60
+bullet: {
+type: BasicBulletType
+width: 3
+height: 3
+speed: 7.5
+lifetime: 8
+damage: 18
+backColor: 6d56bf
+frontColor: bf92f9
+pierce: true
+makeFire: true
+shootStatus: spore-slowed
+shootStatusDuration: 80
+shootEffect: {
+type: ParticleEffect
+sizeFrom: 2
+sizeTo: 2
+colorFrom: 6d56bf
+colorTo: bf92f9
+particles: 6
+length: 40
+lifetime: 10
+cone: 6
+}
+}
 }
 {
 name: sapper

@@ -50,7 +50,7 @@ lightningDamage: 5
 lightningColor: bf92f9
 splashDamageRadius: 35
 splashDamage: 45
-status: sporeSlowed
+status: spore-slowed
 statusDuration: 65
 }
 }
