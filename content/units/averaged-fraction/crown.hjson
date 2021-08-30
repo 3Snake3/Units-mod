@@ -5,10 +5,11 @@ health: 450
 armor: 9
 commandLimit: 4
 hitSize: 18
+targetFlags: [generator]
 weapons: [{
 name: crown-missiles
-x: 5
-y: 0
+x: -3
+y: 1
 reload: 80
 shots: 4
 inaccuracy: 4
