@@ -19,10 +19,10 @@ upgrades: [
 consumes: {
     items: {
         items: [
-            silicon/400
-            titanium/350
-            metaglass/200
-            thorium/150
+            silicon/240
+            titanium/230
+            metaglass/125
+            thorium/125
         ]
     }
     power: 10

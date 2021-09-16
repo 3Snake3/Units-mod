@@ -8,6 +8,7 @@ health: 200
 speed: 5
 hitSize: 10
 range: 200
+targetFlags: [generator]
 weapons: [{
 name: none
 x: 2
