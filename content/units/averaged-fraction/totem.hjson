@@ -4,7 +4,7 @@ canBoost: true
 boostMultiplier: 1
 health: 200
 buildSpeed: 1.6
-armor: 6
+armor: 7
 weapons: [{
 name: heal-blaster
 x: 6
