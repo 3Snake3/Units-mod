@@ -1,0 +1,146 @@
+flying: true
+health: 5500
+accel: 0.07
+drag: 0.07
+armor: 10
+hitSize: 48
+speed: 1.3
+circleTarget: true
+engineSize: 4.7
+engineOffset: 19
+rotateSpeed: 2
+weapons: [{
+name: snow-missiles
+x: 15
+y: 8
+reload: 80
+recoil: 3
+shots: 3
+shotDelay: 3
+spacing: 4
+inaccuracy: 4
+rotate: true
+alternate: true
+rotateSpeed: 5
+shootSound: missile
+bullet: {
+type: MissileBulletType
+width: 12
+height: 12
+sprite: units-mod-snow-effect
+spin: 5
+speed: 6
+lifetime: 41.66
+damage: 30
+splashDamage: 60
+splashDamageRadius: 60
+homingPower: 0.98
+homingRange: 50
+homingDelay: 3
+status: freezing
+hitEffect: {
+type: ExplosionEffect
+waveColor: ffffff
+smokeColor: ffffff
+waveLife: 23
+smokeSize: 3
+waveRad: 60
+smokeRad: 62
+smokes: 5
+sparks: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: ffffff
+smokeColor: ffffff
+waveLife: 23
+smokeSize: 3
+waveRad: 60
+smokeRad: 62
+smokes: 5
+sparks: 0
+}
+backColor: a9d8ff
+frontColor: ffffff
+trailColor: a9d8ff
+fragBullets: 10
+fragCone: 180
+fragBullet: {
+width: 9
+height: 9
+speed: 5
+lifetime: 25
+damage: 10
+hitEffect: {
+type: ExplosionEffect
+waveColor: a9d8ff
+smokeColor: a9d8ff
+waveLife: 18
+smokeSize: 3
+waveRad: 20
+smokeRad: 22
+smokes: 3
+sparks: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: a9d8ff
+smokeColor: a9d8ff
+waveLife: 18
+smokeSize: 3
+waveRad: 20
+smokeRad: 22
+smokes: 3
+sparks: 0
+}
+backColor: a9d8ff
+frontColor: ffffff
+}
+}
+}
+{
+name: glacier-laser
+x: 0
+y: 10.5
+top: false
+mirror: false
+continuous: true
+shootSound: beam
+reload: 200
+recoil: 0
+shootStatus: freezing
+shootStatusDuration: 130
+shake: 6
+bullet: {
+type: ContinuousLaserBulletType
+colors: [a9d8ff, a9d8ff, a9d8ff, ffffff]
+damage: 8
+length: 160
+lifetime: 120
+incendAmount: 0
+incendChance: 0
+makeFire: false
+width: 3
+hitEffect: {
+type: ParticleEffect
+region: units-mod-snow-effect
+sizeFrom: 4
+sizeTo: 0
+colorFrom: a9d8ff
+colorTo: ffffff
+lifetime: 20
+length: 20
+}
+}
+}]
+research: {
+parent: ice-hail
+requirements: [
+silicon/25000
+titanium/25000
+thorium/25000
+metaglass/18000
+plastanium/12000
+]
+}
+

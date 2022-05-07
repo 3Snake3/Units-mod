@@ -1,0 +1,74 @@
+flying: true
+health: 300
+armor: 2
+accel: 0.07
+drag: 0.04
+rotateSpeed: 3
+speed: 2
+targetAir: false
+circleTarget: true
+hitSize: 10
+targetFlags: [generator]
+playerTargetFlags: [generator]
+weapons: [{
+name: snow-bomber
+x: 0
+y: 0
+reload: 30
+recoil: 0
+mirror: false
+top: false
+shootCone: 360
+ignoreRotation: true
+shootSound: missile
+bullet: {
+type: MissileBulletType
+width: 12
+height: 12
+sprite: units-mod-snow-effect
+damage: 20
+splashDamage: 45
+splashDamageRadius: 25
+status: freezing
+statusDuration: 125
+spin: 5
+backColor: a9d8ff
+frontColor: ffffff
+trailColor: a9d8ff
+hitEffect: {
+type: ExplosionEffect
+sparks: 0
+smokes: 5
+waveRad: 25
+smokeRad: 28
+waveLife: 15
+smokeSize: 3
+waveColor: a9d8ff
+smokeColor: a9d8ff
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 0
+smokes: 5
+waveRad: 25
+smokeRad: 28
+waveLife: 15
+smokeSize: 3
+waveColor: a9d8ff
+smokeColor: a9d8ff
+}
+homingPower: 0.75
+homingRange: 40
+collides: false
+collidesTiles: false
+}
+}]
+research: {
+parent: snowflake
+requirements: [
+silicon/4000
+metaglass/4000
+graphite/3000
+]
+}
+

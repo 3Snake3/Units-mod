@@ -1,0 +1,40 @@
+health: 400
+armor: 4
+speed: 1
+hitSize: 8
+canBoost: true
+engineOffset: 5.5
+lowAltitude: true
+weapons: [{
+x: 5
+y: 1.5
+top: false
+name: small-shotgun
+reload: 45
+ejectEffect: casing1
+shots: 3
+shotDelay: 2
+inaccuracy: 6
+bullet: {
+type: BasicBulletType
+width: 7
+height: 9
+speed: 7
+damage: 25
+lifetime: 30
+trailChance: 1
+trailLength: 15
+trailWidth: 1
+trailColor: f9c27a
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+homingPower: 0.08
+}}]
+research: {
+parent: dagger
+requirements: [
+lead/4000
+silicon/3000
+titanium/2500
+]
+}

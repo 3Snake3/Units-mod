@@ -1,0 +1,66 @@
+canBoost: true
+boostMultiplier: 1.5
+speed: 0.75
+hitSize: 8
+health: 220
+buildSpeed: 0.85
+armor: 2
+commandLimit: 8
+singleTarget: true
+abilities: [
+{
+type: RepairFieldAbility
+range: 75
+reload: 125
+amount: 25
+}
+]
+weapons: [
+{
+name: heal-blaster
+top: false
+shootY: 2
+reload: 32
+x: 5.5
+alternate: false
+ejectEffect: none
+recoil: 2
+shootSound: lasershoot
+bullet: {
+type: LaserBoltBulletType
+speed: 6
+damage: 15
+lifetime: 30
+healPercent: 8
+collidesTeam: true
+backColor: 98ffa9
+frontColor: ffffff
+pierce: true
+pierceBuilding: true
+reflectable: false
+hittable: false
+}
+}
+{
+name: volition-heal-bullet-mount
+x: 3.5
+y: -0.8
+reload: 7
+alternate: true
+shootY: 2
+ejectEffect: casing1
+shootSound: shootSnap
+recoil: 2
+bullet: {
+width: 7
+height: 12
+collidesTeam: true
+healPercent: 4
+speed: 7
+damage: 15
+lifetime: 25
+backColor: 98ffa9
+frontColor: ffffff
+}
+}
+]

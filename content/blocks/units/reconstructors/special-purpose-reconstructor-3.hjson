@@ -5,21 +5,21 @@ consumes: {
   liquid: water/0.6
   items: {
     items: [
-    silicon/1000
-    titanium/780
+    silicon/900
+    titanium/750
     plastanium/500
-    metaglass/200
-    phase-fabric/100
+    thorium/200
     ]
   }
 }
 constructTime: 5800
 requirements: [
-  silicon/900
-  titanium/700
-  thorium/650
-  plastanium/500
-  phase-fabric/100
+  lead/3000
+  silicon/3000
+  titanium/1000
+  thorium/800
+  plastanium/400
+  phase-fabric/230
 ]
 upgrades: [
 [sting, sickle],

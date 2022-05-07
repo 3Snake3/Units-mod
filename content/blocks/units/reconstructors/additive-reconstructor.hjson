@@ -3,6 +3,9 @@ upgrades: [
     mono, poly
   ]
   [
+    case, solution
+  ]
+  [
    flare, horizon
   ]
   [

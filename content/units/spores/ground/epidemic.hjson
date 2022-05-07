@@ -1,0 +1,114 @@
+speed: 0.40
+hitSize: 25
+rotateSpeed: 2.5
+health: 18000
+armor: 16
+mechFrontSway: 1
+mechStepParticles: true
+mechStepShake: 0.15
+range: 230
+weapons: [{
+name: epidemic-weapon
+top: false
+y: 1
+x: 16
+shootY: 8
+reload: 80
+recoil: 5
+shake: 4
+ejectEffect: casing3
+shootSound: railgun
+shootStatus: spore-slowed
+shootStatusDuration: 80
+shots: 3
+shotDelay: 6
+bullet: {
+sprite: units-mod-spore-bullet
+damage: 45
+speed: 20
+width: 15
+height: 25
+lifetime: 11.5
+pierce: true
+pierceBuilding: true
+trailEffect: {
+type: ParticleEffect
+particles: 18
+sizeFrom: 4
+sizeTo: 0
+lifetime: 25
+colorFrom: bf92f9
+colorTo: 6d56bf
+length: -35
+}
+trailChance: 1
+trailColor: 6d56bf
+shootEffect: {
+type: ParticleEffect
+particles: 20
+length: 45
+sizeFrom: 4
+sizeTo: 0
+lifetime: 25
+interp: circleOut
+line: true
+strokeFrom: 3
+strokeTo: 0
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+backColor: 6d56bf
+frontColor: ffffff
+hitSound: explosion
+fragBullets: 1
+fragCone: 360
+fragBullet: {
+width: 10
+height: 15
+damage: 12
+backColor: 6d56bf
+frontColor: ffffff
+speed: 7
+lifetime: 25
+pierceBuilding: true
+trailChance: 1
+trailEffect: {
+type: ParticleEffect
+particles: 18
+sizeFrom: 3
+sizeTo: 0
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+length: -25
+}
+hitEffect: {
+type: ParticleEffect
+particles: 6
+line: true
+sizeFrom: 3
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+}
+}
+}
+]
+research: {
+parent: infection
+requirements: [
+lead/25000
+silicon/25000
+titanium/25000
+metaglass/23000
+thorium/23000
+spore-pod/18000
+plastanium/20000
+]
+}

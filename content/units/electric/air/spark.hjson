@@ -1,0 +1,40 @@
+flying: true
+health: 150
+accel: 0.06
+drag: 0.04
+circleTarget: true
+hitSize: 9
+speed: 5
+range: 270
+targetAir: false
+targetFlags: [generator]
+playerTargetFlags: [generator]
+weapons: [
+{
+name: spark-lightning
+x: 0
+y: 0
+reload: 10
+recoil: 0
+mirror: false
+shootCone: 360
+inaccuracy: 360
+spacing: 10
+shots: 6
+shotDelay: 7
+shootSound: spark
+bullet: {
+type: LightningBulletType
+damage: 30
+lightningLength: 8
+lightningColor: f3e979
+hitColor: f3e979
+}
+}]
+research: {
+parent: special-air-factory
+requirements: [
+silicon/2000
+surge-alloy/2000
+]
+}

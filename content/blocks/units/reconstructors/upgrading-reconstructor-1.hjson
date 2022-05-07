@@ -2,7 +2,6 @@ type: Reconstructor
 size: 3
 consumes: {
   power: 5.2
-  liquid: water/0.05
   items: {
     items: [
     graphite/60
@@ -13,27 +12,29 @@ consumes: {
 }
 constructTime: 720
 requirements: [
-  copper/350
-  lead/280
+  lead/320
   graphite/240
   silicon/180
   titanium/120
 ]
 upgrades: [
   [
-    mono, vano
+    mono, scales
   ]
   [
-    poly, pal
+    poly, safety
   ]
   [
     dagger, knife
   ]
   [
-    mace, axe
+    nova, volition
   ]
   [
-    crown, mantle
+    pulsar, volition
+  ]
+  [
+    mace, axe
   ]
 ]
 category: units

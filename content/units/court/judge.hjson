@@ -1,0 +1,108 @@
+type: payload
+health: 1350
+armor: 8
+speed: 2
+rotateSpeed: 10
+range: 240
+hitSize: 25
+accel: 0.04
+drag: 0.016
+flying: true
+lowAltitude: true
+targetFlags: [storage, battery]
+playerTargetFlags: [storage, battery]
+engineOffset: 12
+engineSize: 3
+weapons: [
+{
+name: judge-swarmer
+y: 0.75
+x: 0
+mirror: false
+reload: 25
+recoil: 2
+xRand: 6
+shots: 3
+inaccuracy: 6
+spacing: 8
+velocityRnd: 0.4
+shake: 2
+shootY: 2.25
+ejectEffect: none
+shootSound: missile
+shotDelay: 1
+bullet: {
+type: MissileBulletType
+width: 8
+height: 8
+speed: 6
+lifetime: 40
+keepVelocity: false
+drag: -0.003
+damage: 15
+splashDamage: 45
+splashDamageRadius: 45
+weaveScale: 3
+weaveMag: 4
+inaccuracy: 4
+backColor: 98ffa9
+trailColor: 98ffa9
+frontColor: ffffff
+trailChance: 0.5
+hitColor: 98ffa9
+status: electrified
+statusDuration: 180
+lightning: 2
+lightningColor: 98ffa9
+lightningLength: 7
+lightningDamage: 10
+hitEffect: {
+type: ExplosionEffect
+waveRad: 45
+waveLife: 20
+waveColor: 98ffa9
+sparks: 7
+sparkRad: 55
+sparkLen: 6
+sparkStroke: 3
+sparkColor: 98ffa9
+smokes: 7
+smokeRad: 55
+smokeSize: 6
+smokeColor: 98ffa9
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 45
+waveLife: 20
+waveColor: 98ffa9
+sparks: 7
+sparkRad: 55
+sparkLen: 6
+sparkStroke: 3
+sparkColor: 98ffa9
+smokes: 7
+smokeRad: 55
+smokeSize: 6
+smokeColor: 98ffa9
+}
+}
+}]
+abilities: [
+{
+type: RepairFieldAbility
+amount: 35
+reload: 60
+range: 80
+}
+]
+research: {
+parent: zenith 
+objectives: [mega]
+requirements: [
+silicon/15000
+plastanium/10000
+titanium/8000
+metaglass/8000
+]
+}

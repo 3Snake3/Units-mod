@@ -1,21 +1,20 @@
 type: Reconstructor
 size: 3
 consumes: {
-  power: 5.2
+  power: 5
   items: {
     items: [
-    silicon/60
-    titanium/45
-    metaglass/20
+    silicon/50
+    titanium/50
+    lead/30
     ]
   }
 }
 constructTime: 750
 requirements: [
-  lead/160
-  graphite/140
-  metaglass/80
-  titanium/100
+  copper/225
+  lead/130
+  titanium/80
 ]
 upgrades: [
   [blade, arrow]

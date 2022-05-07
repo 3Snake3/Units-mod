@@ -1,0 +1,142 @@
+mineTier: 3
+boostMultiplier: 1.8
+health: 760
+buildSpeed: 1.8
+canBoost: true
+armor: 12
+landShake: 2.5
+riseSpeed: 0.08
+commandLimit: 6
+mechFrontSway: 0.55
+speed: 0.32
+hitSize: 15
+mineSpeed: 7
+drawShields: false
+abilities: [
+{
+type: ForceFieldAbility
+radius: 60
+regen: 0.5
+max: 1000
+cooldown: 180
+}
+{
+type: RepairFieldAbility
+range: 45
+amount: 30
+reload: 120
+}
+]
+weapons: [
+{
+name: burden-laser-basic-mount
+y: 0
+x: 10
+reload: 80
+recoil: 4
+alternate: false
+top: false
+shake: 2
+ejectEffect: none
+shootSound: laser
+inaccuracy: 3
+bullet: {
+type: LaserBulletType
+drawSize: 200
+length: 220
+damage: 50
+collidesTeam: true
+healPercent: 10
+sideWidth: 0
+sideLength: 0
+shootEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 32
+strokeFrom: 2
+strokeTo: 0
+lifetime: 20
+colorFrom: 98ffa9
+colorTo: ffffff
+}
+colors: [98ffa9, 98ffa9, ffffff]
+}
+}
+{
+name: burden-laser-mount
+x: 6
+y: 0
+shadow: 12
+controllable: false
+autoTarget: true
+alternate: false
+shake: 2
+rotate: true
+targetInterval: 20
+targetSwitchInterval: 35
+rotateSpeed: 3.5
+reload: 125
+recoil: 1
+shootSound: beam
+continuous: true
+cooldownTime: 125
+immunities: [burning]
+bullet: {
+type: ContinuousLaserBulletType
+maxRange: 90
+length: 95
+damage: 5
+hitEffect: hitMeltHeal
+drawSize: 200
+lifetime: 200
+shake: 1
+shootEffect: shootHeal
+smokeEffect: none
+width: 3
+largeHit: true
+incendChance: 0.04
+incendSpread: 5
+incendAmount: 1
+collidesTeam: true
+healPercent: 1
+colors: [98ffa9, 98ffa9, 98ffa9, ffffff]
+}
+}
+{
+name: burden-weapon
+x: 0
+y: 0
+shootY: 7
+reload: 80
+mirror: false
+top: false
+recoil: 0
+cooldownTime: 70
+shootSound: laser
+shootStatus: unmoving
+shootStatusDuration: 30
+bullet: {
+type: LaserBulletType
+drawSize: 200
+length: 220
+damage: 50
+collidesTeam: true
+healPercent: 10
+sideWidth: 0
+sideLength: 0
+shootEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 32
+strokeFrom: 2
+strokeTo: 0
+lifetime: 20
+colorFrom: 98ffa9
+colorTo: ffffff
+}
+colors: [98ffa9, 98ffa9, ffffff]
+}
+}
+]

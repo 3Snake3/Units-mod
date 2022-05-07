@@ -1,0 +1,325 @@
+flying: true
+health: 20000
+armor: 25
+circleTarget: true
+speed: 0.98
+rotateSpeed: 1.4
+drag: 0.09
+hitSize: 54
+engineOffset: 31.25
+immunities: [shocked, electrified]
+engineSize: 5.5
+playerTargetFlags: [generator, reactor]
+targetFlags: [generator, reactor]
+rotateShooting: false
+weapons: [{
+name: thunder-laser-mount
+y: 18.75
+x: 16.25
+rotate: true
+rotateSpeed: 3.5
+reload: 210
+recoil: 0
+continuous: true
+autoTarget: true
+mirror: false
+shadow: 20
+controllable: false
+targetInterval: 20
+targetSwitchInterval: 35
+shootY: 7
+shootSound: beam
+cooldown: 210
+bullet: {
+type: ContinuousLaserBulletType
+maxRange: 120
+damage: 10
+length: 130
+hitEffect: {
+type: ParticleEffect
+particles: 3
+cone: 180
+length: 20
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+drawSize: 200
+lifetime: 125
+shake: 1
+shootEffect: {
+type: ParticleEffect
+particles: 3
+cone: 360
+length: 40
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+smokeEffect: none
+width: 4
+largeHit: false
+status: shocked
+statusDuration: 190
+incendAmount: 1
+incendChance: 0.08
+incendSpread: 3
+colors: [f3e979, f3e979, f3e979, ffffff]
+}
+}
+{
+name: thunder-laser-mount
+y: 18.75
+x: -16.25
+rotate: true
+rotateSpeed: 3.5
+reload: 260
+recoil: 0
+continuous: true
+autoTarget: true
+mirror: false
+shadow: 20
+controllable: false
+targetInterval: 20
+targetSwitchInterval: 35
+shootY: 7
+shootSound: beam
+cooldown: 210
+bullet: {
+type: ContinuousLaserBulletType
+maxRange: 110
+damage: 10
+length: 120
+hitEffect: {
+type: ParticleEffect
+particles: 3
+cone: 180
+length: 20
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+drawSize: 200
+lifetime: 125
+shake: 1
+shootEffect: {
+type: ParticleEffect
+particles: 3
+cone: 360
+length: 40
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+smokeEffect: none
+width: 4
+largeHit: false
+status: shocked
+statusDuration: 190
+incendAmount: 1
+incendChance: 0.08
+incendSpread: 3
+colors: [f3e979, f3e979, f3e979, ffffff]
+}
+}
+{
+name: thunder-laser-mount
+y: -18.75
+x: 16.25
+rotate: true
+rotateSpeed: 3.5
+reload: 310
+recoil: 0
+continuous: true
+autoTarget: true
+mirror: false
+shadow: 20
+controllable: false
+targetInterval: 20
+targetSwitchInterval: 35
+shootY: 7
+shootSound: beam
+cooldown: 210
+bullet: {
+type: ContinuousLaserBulletType
+maxRange: 110
+damage: 10
+length: 120
+hitEffect: {
+type: ParticleEffect
+particles: 3
+cone: 180
+length: 20
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+drawSize: 200
+lifetime: 125
+shake: 1
+shootEffect: {
+type: ParticleEffect
+particles: 3
+cone: 360
+length: 40
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+smokeEffect: none
+width: 4
+largeHit: false
+status: shocked
+statusDuration: 190
+incendAmount: 1
+incendChance: 0.08
+incendSpread: 3
+colors: [f3e979, f3e979, f3e979, ffffff]
+}
+}
+{
+name: thunder-laser-mount
+y: -18.75
+x: -16.25
+rotate: true
+rotateSpeed: 3.5
+reload: 360
+recoil: 0
+continuous: true
+autoTarget: true
+mirror: false
+shadow: 20
+controllable: false
+targetInterval: 20
+targetSwitchInterval: 35
+shootY: 7
+shootSound: beam
+cooldown: 210
+bullet: {
+type: ContinuousLaserBulletType
+maxRange: 110
+damage: 10
+length: 120
+hitEffect: {
+type: ParticleEffect
+particles: 3
+cone: 180
+length: 20
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+drawSize: 200
+lifetime: 125
+shake: 1
+shootEffect: {
+type: ParticleEffect
+particles: 3
+cone: 360
+length: 40
+lifetime: 20
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+smokeEffect: none
+width: 4
+largeHit: false
+status: shocked
+statusDuration: 190
+incendAmount: 1
+incendChance: 0.08
+incendSpread: 3
+colors: [f3e979, f3e979, f3e979, ffffff]
+}
+}
+{
+name: thunder-bomb
+x: 0
+y: 0
+mirror: false
+top: false
+reload: 60
+recoil: 0
+shootCone: 180
+ignoreRotation: true
+shootSound: plasmadrop
+minShootVelocity: 0.7
+bullet: {
+type: EmpBulletType
+width: 30
+height: 30
+speed: 0
+lifetime: 100
+sprite: large-bomb
+spin: 6
+shrinkY: 0.6
+shrinkX: 0.6
+hitSound: plasmaboom
+damage: 0
+splashDamage: 80
+splashDamageRadius: 120
+hitColor: f3e979
+backColor: f3e979
+frontColor: ffffff
+powerDamageScl: 5
+hitEffect: massiveExplosion
+despawnEffect: {
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 120
+sizeTo: 120
+strokeTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+hitPowerEffect: {
+type: ParticleEffect
+particles: 8
+cone: 360
+length: 45
+lifetime: 30
+line: true
+strokeTo: 0
+lenFrom: 5
+lenTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+hitUnits: false
+}
+}]
+
+research: tesla

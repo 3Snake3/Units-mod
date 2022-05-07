@@ -5,27 +5,27 @@ consumes: {
   liquid: cryofluid/0.7
   items: {
     items: [
-    silicon/1500
+    silicon/1800
+    titanium/1200
     plastanium/800
-    metaglass/900
-    surge-alloy/750
-    phase-fabric/400
+    surge-alloy/670
+    phase-fabric/500
     ]
   }
 }
 constructTime: 15200
 requirements: [
-  graphite/4500
-  silicon/4000
-  titanium/3400
-  thorium/2300
-  plastanium/2100
- metaglass/2000
- phase-fabric/2000
+  lead/6000
+  silicon/3000
+  titanium/3000
+  plastanium/1500
+  surge-alloy/800
+  phase-fabric/600
 ]
 upgrades: [
 [sickle, scythe],
  [glacier, snowstorm],
+ [toxopid, macromate],
  [epidemic, pandemic]
 ]
 category: units

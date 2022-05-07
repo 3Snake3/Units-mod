@@ -1,0 +1,179 @@
+speed: 0.30
+hitSize: 29
+rotateSpeed: 1.65
+health: 30000
+armor: 12
+mechStepParticles: true
+mechStepShake: 0.75
+mechFrontSway: 1.9
+mechSideSway: 0.6
+range: 280
+targetAir: false
+abilities: [{
+type: UnitSpawnAbility
+unit: virus
+spawnX: 0
+spawnY: 23
+spawnTime: 1000
+}
+{
+type: UnitSpawnAbility
+unit: virus
+spawnX: 0
+spawnY: -23
+spawnTime: 1000
+}
+{
+type: UnitSpawnAbility
+unit: virus
+spawnX: 30
+spawnY: 0
+spawnTime: 1000
+}
+{
+type: UnitSpawnAbility
+unit: virus
+spawnX: -30
+spawnY: 0
+spawnTime: 1000
+}]
+weapons: [{
+name: pandemic-weapon
+top: false
+y: 1
+x: 21.5
+shootY: 11
+reload: 12
+recoil: 5
+shake: 3
+ejectEffect: casing4
+shootSound: bang
+shots: 5
+shotDelay: 8
+spacing: 3
+inaccuracy: 4
+bullet: {
+sprite: units-mod-spore-bullet
+width: 15
+height: 20
+damage: 60
+speed: 7
+lifetime: 40
+pierce: true
+pierceBuilding: true
+collidesAir: false
+pierceCap: 2
+hitEffect: {
+type: ParticleEffect
+particles: 6
+line: true
+sizeFrom: 4
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+despawnHit: true
+backColor: 6d56bf
+frontColor: ffffff
+shootEffect: {
+type: ParticleEffect
+particles: 16
+length: 30
+sizeFrom: 5
+sizeTo: 0
+lifetime: 25
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+}
+}
+{
+name: bowler
+x: 0
+y: 0
+shootY: 10
+shootSound: release
+reload: 450
+recoil: 0
+mirror: false
+top: false
+firstShotDelay: 30
+bullet: {
+sprite: units-mod-spore-bullet
+width: 30
+height: 30
+damage: 0
+splashDamage: 200
+splashDamageRadius: 35
+collidesAir: false
+pierce: true
+pierceBuilding: true
+speed: 2
+lifetime: 350
+trailColor: 6d56bf
+weaveMag: 1
+weaveScale: 5
+trailChance: 1
+trailEffect: {
+type: ParticleEffect
+particles: 20
+sizeFrom: 5
+sizeTo: 0
+length: -40
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+hitSound: explosion
+knockback: 2.5
+collideTerrain: true
+hitEffect: {
+type: MultiEffect
+effects: [sapExplosion, {
+type: ParticleEffect
+particles: 8
+length: 25
+lifetime: 30
+cone: 360
+line: true
+strokeFrom: 4
+strokeTo: 0
+sizeFrom: 14
+sizeTo: 0
+colorFrom: bf92f9
+colorTo: 6d56bf
+}]
+}
+despawnHit: true
+shootEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 25
+sizeTo: 0
+lifetime: 30
+strokeFrom: 4
+strokeTo: 0
+region: units-mod-empty-circle
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+backColor: 6d56bf
+frontColor: ffffff
+}
+}]
+research: {
+parent: epidemic
+requirements: [
+lead/50000
+silicon/55000
+titanium/60000
+metaglass/60000
+thorium/50000
+spore-pod/38000
+plastanium/42000
+phase-fabric/30000
+]
+}

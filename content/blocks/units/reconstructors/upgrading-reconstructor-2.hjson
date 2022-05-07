@@ -11,16 +11,17 @@ requirements: [
 ]
 
 upgrades: [
-    [mega, magno],
+    [mega, insurance],
     [zenith, galaxy],
+    [quasar, burden],
     [fortress, tower]
 ]
 
 consumes: {
     items: {
         items: [
-            silicon/240
-            titanium/230
+            silicon/245
+            titanium/215
             metaglass/125
             thorium/125
         ]

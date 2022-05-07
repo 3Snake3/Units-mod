@@ -1,0 +1,197 @@
+flying: true
+health: 20000
+drag: 0.05
+accel: 0.08
+engineOffset: 38
+hitSize: 58
+engineSize: 7.3
+armor: 6
+rotateSpeed: 0.8
+lowAltitude: true
+speed: 0.6
+destructibleWreck: false
+targetFlags: [reactor]
+playerTargetFlags: [reactor]
+weapons: [{
+name: small-spheres-guns
+x: 17
+y: 20
+reload: 50
+recoil: 2
+shake: 3
+shootCone: 45
+rotate: true
+rotateSpeed: 4
+alternate: true
+shootSound: missile
+bullet: {
+type: MissileBulletType
+sprite: units-mod-spore-bullet
+width: 16
+height: 16
+lifetime: 30
+speed: 6
+damage: 50
+splashDamage: 80
+splashDamageRadius: 80
+keepVelocity: false
+homingPower: 0.75
+homingRange: 80
+pierce: true
+pierceBuilding: true
+backColor: bf92f9
+frontColor: ffffff
+trailColor: bf92f9
+status: spore-slowed
+statusDuration: 180
+hitEffect: {
+type: ExplosionEffect
+waveColor: bf92f9 
+smokeColor: 6d56bf 
+sparkColor: bf92f9
+waveLife: 10
+waveStroke: 3
+waveRad: 80
+sparkStroke: 3
+sparkRad: 75
+sparkLen: 15
+smokeSize: 5
+smokeRad: 75
+smokes: 5
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: bf92f9 
+smokeColor: 6d56bf 
+sparkColor: bf92f9
+waveLife: 10
+waveStroke: 3
+waveRad: 80
+sparkStroke: 3
+sparkRad: 75
+sparkLen: 15
+smokeSize: 5
+smokeRad: 75
+smokes: 5
+}
+trailChance: 1
+trailEffect: {
+type: ParticleEffect
+particles: 6
+length: -20
+lifetime: 20
+sizeFrom: 3
+sizeTo: 0
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+}
+}
+{
+name: small-spheres-guns
+x: 15
+y: -15
+reload: 50
+recoil: 2
+shake: 3
+shootCone: 45
+rotate: true
+rotateSpeed: 4
+alternate: true
+shootSound: missile
+bullet: {
+type: MissileBulletType
+sprite: units-mod-spore-bullet
+width: 16
+height: 16
+lifetime: 30
+speed: 6
+damage: 50
+splashDamage: 80
+splashDamageRadius: 80
+homingPower: 0.75
+homingRange: 80
+pierce: true
+pierceBuilding: true
+backColor: bf92f9
+frontColor: ffffff
+trailColor: bf92f9
+status: spore-slowed
+statusDuration: 180
+hitEffect: {
+type: ExplosionEffect
+waveColor: bf92f9 
+smokeColor: 6d56bf 
+sparkColor: bf92f9
+waveLife: 10
+waveStroke: 3
+waveRad: 80
+sparkStroke: 3
+sparkRad: 75
+sparkLen: 15
+smokeSize: 5
+smokeRad: 75
+smokes: 5
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: bf92f9 
+smokeColor: 6d56bf 
+sparkColor: bf92f9
+waveLife: 10
+waveStroke: 3
+waveRad: 80
+sparkStroke: 3
+sparkRad: 75
+sparkLen: 15
+smokeSize: 5
+smokeRad: 75
+smokes: 5
+}
+trailChance: 1
+trailEffect: {
+type: ParticleEffect
+particles: 6
+length: -20
+lifetime: 20
+sizeFrom: 3
+sizeTo: 0
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+}
+}
+{
+name: laser-cannon
+x: 12
+y: 4
+reload: 80
+recoil: 4
+shootCone: 90
+shootSound: laser
+shots: 3
+spacing: 4
+rotate: true
+rotateSpeed: 2
+shadow: 20
+shootY: 9
+bullet: {
+type: LaserBulletType
+length: 200
+damage: 80
+colors: ["6d56bf", "bf92f9", "ffffff"]
+status: sapped
+statusDuration: 65
+}
+}]
+research: {
+parent: sickle
+requirements: [
+silicon/45000
+titanium/45000
+thorium/40000
+metaglass/35000
+plastanium/20000
+surge-alloy/25000
+]
+}

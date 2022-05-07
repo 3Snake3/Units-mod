@@ -1,0 +1,113 @@
+flying: true
+speed: 2
+health: 700
+armor: 5
+accel: 0.014
+drag: 0.01
+hitSize: 30
+lowAltitude: true
+engineOffset: 11
+engineSize: 3
+targetAir: false
+targetFlags: [battery, generator, reactor]
+playerTargetFlags: [battery, generator, reactor]
+weapons: [{
+name: snow-cannons
+x: 5
+y: 0
+reload: 60
+alternate: true
+rotate: true
+shootCone: 80
+ejectEffect: casing2
+shootSound: artillery
+ignoreRotation: true
+bullet: {
+type: ArtilleryBulletType
+speed: 4.5
+damage: 25
+width: 12
+lifetime: 75
+height: 12
+splashDamage: 40
+splashDamageRadius: 35
+backColor: a9d8ff
+frontColor: ffffff
+status: freezing
+statusDuration: 150
+trailEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 15
+sizeFrom: 3
+sizeTo: 0
+colorFrom: a9d8ff
+colorTo: a9d8ff
+region: units-mod-snow-effect
+}
+hitEffect: {
+type: ExplosionEffect
+waveColor: a9d8ff
+smokeColor: a9d8ff
+waveRad: 35
+smokeRad: 37
+waveLife: 20
+smokeSize: 3
+smokes: 4
+sparks: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: a9d8ff
+smokeColor: a9d8ff
+waveRad: 35
+smokeRad: 37
+waveLife: 20
+smokeSize: 3
+smokes: 4
+sparks: 0
+}
+fragBullets: 10
+fragBullet: {
+width: 10
+height: 10
+speed: 3
+lifetime: 60
+damage: 25
+backColor: a9d8ff
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+waveColor: a9d8ff
+smokeColor: a9d8ff
+waveRad: 35
+smokeRad: 37
+waveLife: 20
+smokeSize: 3
+smokes: 4
+sparks: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: a9d8ff
+smokeColor: a9d8ff
+waveRad: 35
+smokeRad: 37
+waveLife: 20
+smokeSize: 3
+smokes: 4
+sparks: 0
+}
+}
+}
+}]
+research: {
+parent: chill
+requirements: [
+silicon/7000
+graphite/7000
+metaglass/6700
+titanium/6000
+]
+}

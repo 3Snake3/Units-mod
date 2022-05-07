@@ -1,0 +1,59 @@
+speed: 0.6
+hitSize: 9
+health: 600
+armor: 3
+weapons: [{
+name: purple-flamethrower
+top: false
+shootSound: flame
+shootY: 3
+reload: 7
+recoil: 2
+ejectEffect: none
+bullet: {
+sprite: units-mod-spore-bullet
+width: 10
+height: 10
+speed: 7
+lifetime: 8
+damage: 35
+backColor: 6d56bf
+frontColor: bf92f9
+pierce: true
+pierceBuilding: true
+makeFire: true
+shootStatus: spore-slowed
+shootStatusDuration: 80
+shootEffect: {
+type: ParticleEffect
+sizeFrom: 2
+sizeTo: 0
+colorFrom: 6d56bf
+colorTo: ffffff
+particles: 15
+length: 10
+lifetime: 8
+cone: 5
+interp: circleOut
+}
+trailChance: 1
+trailEffect: {
+type: ParticleEffect
+particles: 18
+sizeFrom: 2
+sizeTo: 0
+length: -10
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+}
+}]
+research: {
+parent: cold
+requirements: [
+lead/4000
+graphite/3000
+silicon/3000
+spore-pod/3000
+]
+}

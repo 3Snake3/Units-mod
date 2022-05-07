@@ -1,0 +1,124 @@
+hitSize: 35
+health: 33000
+armor: 20
+landShake: 2
+rotateSpeed: 0.85
+drownTimeMultiplier: 6
+commandLimit: 4
+legCount: 6
+legLength: 16
+legBaseOffset: 13
+legMoveSpace: 2
+legTrns: 0.62
+hovering: true
+visualElevation: 0.5
+speed: 0.2
+singleTarget: true
+weapons: [
+{
+name: challenge-weapon
+shootSound: laserblast
+chargeSound: lasercharge
+soundPitchMin: 1
+top: false
+mirror: false
+shake: 16
+shootY: 15
+x: 0
+y: 0
+reload: 420
+recoil: 0
+cooldownTime: 420
+shootStatusDuration: 160
+shootStatus: unmoving
+firstShotDelay: 60
+bullet: {
+type: LaserBulletType
+length: 460
+damage: 500
+width: 75
+lifetime: 70
+lightningSpacing: 45
+lightningLength: 8
+lightningDelay: 1.8
+lightningLengthRand: 20
+lightningDamage: 80
+lightningAngleRand: 60
+largeHit: true
+lightningColor: 98ffa9
+lightColor: 98ffa9
+shootEffect: greenLaserCharge
+healPercent: 40
+collidesTeam: true
+sideAngle: 45
+sideWidth: 0
+sideLength: 0
+colors: [98ffa9, 98ffa9, ffffff]
+}
+}
+{
+name: challenge-weapon-mount
+y: 1
+x: 23.8
+shootY: 14
+reload: 120
+recoil: 5
+shake: 2
+ejectEffect: none
+shootSound: beam
+continuous: true
+alternate: false
+bullet: {
+type: ContinuousLaserBulletType
+damage: 40
+length: 260
+hitEffect: hitMeltHeal
+width: 5
+drawSize: 420
+lifetime: 160
+shake: 1
+despawnEffect: smokeCloud
+smokeEffect: none
+shootEffect: greenLaserChargeSmall
+incendChance: 0.6
+incendSpread: 7
+incendAmount: 1
+healPercent: 5
+collidesTeam: true
+colors: [98ffa9, 98ffa9, 98ffa9, ffffff]
+}
+}
+{
+name: heal-mount
+y: -2
+x: 19.5
+reload: 80
+recoil: 4
+alternate: true
+rotate: true
+shootY: 3
+inaccuracy: 6
+shootSound: artillery
+bullet: {
+type: ArtilleryBulletType
+width: 18
+height: 18
+splashDamage: 45
+splashDamageRadius: 45
+backColor: 98ffa9
+frontColor: ffffff
+trailColor: 98ffa9
+collides: true
+speed: 4
+lifetime: 60
+hitEffect: blastExplosion
+}
+}]
+abilities: [
+{
+type: RepairFieldAbility
+amount: 300
+reload: 260
+range: 70
+}
+]

@@ -4,21 +4,17 @@ consumes: {
   power: 4
   items: {
     items: [
-    graphite/120
-    silicon/120
-    titanium/100
-    metaglass/100
+    silicon/85
+    graphite/85
+    titanium/40
     ]
   }
 }
-constructTime: 750
+constructTime: 700
 requirements: [
-  graphite/250
-  silicon/200
-  titanium/180
-  metaglass/120
-  thorium/120
-  plastanium/80
+  copper/300
+  titanium/100
+  silicon/120
 ]
 upgrades: [
 [dagger, blaster]
@@ -32,12 +28,8 @@ upgrades: [
   [
   horizon, glaive
   ]
-  [poly, trident]
   [
-  nova, totem
-  ]
-  [
-  arrow, crown
+  blade, crown
   ]
 ]
 category: units

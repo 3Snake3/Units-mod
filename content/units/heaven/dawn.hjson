@@ -1,0 +1,50 @@
+flying: true
+speed: 4
+accel: 0.012
+drag: 0.02
+range: 140
+flying: true
+health: 200
+engineOffset: 5.5
+targetAir: true
+commandLimit: 4
+targetFlags: [generator]
+playerTargetFlags: [generator]
+armor: 3
+hitSize: 11
+weapons: [{
+name: small-weapon
+y: 0
+x: 3.75
+reload: 13
+ejectEffect: casing1
+alternate: true
+shots: 3
+shotDelay: 4
+bullet: {
+type: BasicBulletType
+speed: 5
+damage: 8
+width: 7
+height: 9
+trailLength: 15
+trailWidth: 1
+trailColor: f9c27a
+lifetime: 28
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+ammoMultiplier: 4
+homingPower: 0.1
+homingRange: 60
+}
+shootSound: shoot
+}
+]
+research: {
+parent: flare
+requirements: [
+graphite/5000
+silicon/4000
+titanium/3000
+]
+}

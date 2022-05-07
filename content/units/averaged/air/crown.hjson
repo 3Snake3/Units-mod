@@ -1,0 +1,66 @@
+flying: true
+speed: 1.11
+drag: 0.017
+accel: 0.035
+health: 170
+armor: 5
+commandLimit: 4
+hitSize: 12
+targetFlags: [generator]
+playerTargetFlags: [generator]
+weapons: [{
+name: crown-missiles
+x: -3
+y: 1
+reload: 75
+shots: 4
+inaccuracy: 2
+alternate: true
+ejectEffect: none
+velocityRnd: 0.2
+spacing: 1
+bullet: {
+type:  MissileBulletType
+width: 8
+height: 8
+shrinkX: 0
+shrinkY: 0
+drag: -0.003
+keepVelocity: false
+splashDamageRadius: 40
+splashDamage: 45
+speed: 5
+damage: 10
+lifetime: 90
+trailColor: 6d56bf
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+backColor: 6d56bf
+frontColor: bf92f9
+weaveScale: 8
+weaveMag: 2
+}
+shootSound: missile
+}
+]
+abilities: [
+{
+type: MoveLightningAbility
+damage: 14
+chance: 0.1
+length: 15
+minSpeed: 0.8
+maxSpeed: 1.11
+color: bf92f9
+}
+]
+research: {
+parent: arrow
+requirements: [
+graphite/8000
+silicon/8000
+titanium/7500
+metaglass/5500
+plastanium/3500
+]
+}

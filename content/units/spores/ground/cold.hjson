@@ -1,0 +1,62 @@
+type: mech
+health: 200
+speed: 0.83
+hitSize: 8
+weapons: [{
+name: sap-weapon
+x: 4.25
+y: 1.25
+recoil: 3
+reload: 15
+ejectEffect: casing1
+shots: 3
+shotDelay: 6
+bullet: {
+speed: 4
+sprite: units-mod-spore-bullet
+damage: 12
+pierce: true
+pierceBuilding: true
+width: 7
+height: 12
+lifetime: 35
+shootEffect: {
+type: ParticleEffect
+particles: 7
+sizeFrom: 3
+sizeTo: 0
+length: 45
+cone: 4
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+hitEffect: {
+type: ParticleEffect
+particles: 6
+line: true
+sizeFrom: 3
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+smokeEffect: shootSmallSmoke
+ammoMultiplier: 2
+backColor: 6d56bf
+frontColor: ffffff
+status: spore-slowed
+statusDuration: 60
+}
+}]
+research: {
+parent: dagger
+objectives: [special-ground-factory]
+requirements: [
+lead/2000
+silicon/2600
+spore-pod/1800
+]
+}

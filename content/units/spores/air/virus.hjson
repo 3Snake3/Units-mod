@@ -1,0 +1,42 @@
+type: flying
+flying: true
+speed: 0.35
+rotateSpeed: 1.65
+engineOffset: 3.5
+engineSize: 1.2
+health: 450
+hitSize: 8
+range: 280
+drawCell: false
+abilities: [{
+type: ForceFieldAbility
+radius: 40
+max: 1250
+cooldown: 200
+regen: 0.6
+}]
+weapons: [{
+name: artillery-mount
+x: 0
+y: 0
+reload: 60
+recoil: 0
+mirror: false
+shootSound: bang
+bullet: {
+type: ArtilleryBulletType
+width: 12
+height: 12
+speed: 3
+lifetime: 93.33
+splashDamage: 35
+splashDamageRadius: 30
+hitEffect: sapExplosion
+despawnHit: true
+backColor: 6d56bf
+trailColor: 6d56bf
+frontColor: ffffff
+status: spore-slowed
+}
+}]
+

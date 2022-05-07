@@ -1,0 +1,117 @@
+flying: true
+health: 10000
+drag: 0.04
+engineSize: 13
+engineOffset: 17
+hitSize: 60
+armor: 12
+rotateSpeed: 1.8
+lowAltitude: true
+accel: 0.04
+speed: 0.8
+targetFlags: [turret]
+playerTargetFlags: [turret]
+weapons: [{
+name: sickle-swarmer
+x: 12
+y: 6
+shots: 6
+spacing: 5
+reload: 80
+shotDelay: 6
+inaccuracy: 6
+xRand: 6
+shootSound: missile
+rotate: true
+alternate: true
+rotateSpeed: 4
+bullet: {
+type: MissileBulletType
+sprite: units-mod-spore-bullet
+width: 14
+height: 14
+lifetime: 47
+speed: 5
+damage: 20
+splashDamage: 60
+splashDamageRadius: 70
+homingPower: 0.2
+homingRange: 75
+homingDelay: 6
+pierce: true
+pierceBuilding: true
+pierceCap: 1
+backColor: bf92f9
+frontColor: ffffff
+trailColor: bf92f9
+status: spore-slowed
+statusDuration: 120
+hitEffect: {
+type: ExplosionEffect
+waveColor: bf92f9 
+smokeColor: 6d56bf 
+sparkColor: bf92f9
+waveLife: 10
+waveStroke: 3
+waveRad: 70
+sparkStroke: 3
+sparkRad: 65
+sparkLen: 15
+smokeSize: 5
+smokeRad: 65
+smokes: 4
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: bf92f9 
+smokeColor: 6d56bf 
+sparkColor: bf92f9
+waveLife: 10
+waveStroke: 3
+waveRad: 70
+sparkStroke: 3
+sparkRad: 65
+sparkLen: 15
+smokeSize: 5
+smokeRad: 65
+smokes: 4
+}
+trailChance: 1
+}
+}
+{
+name: sickle-triple-laser-cannon
+mirror: false
+x: 0
+y: 24.5
+reload: 100
+recoil: 4
+shootCone: 90
+shootSound: laser
+shots: 3
+spacing: 4
+shootY: 9
+rotateSpeed: 2
+shootStatus: unmoving
+shootStatusDuration: 40
+bullet: {
+type: LaserBulletType
+length: 220
+damage: 70
+colors: ["6d56bf", "bf92f9", "ffffff"]
+status: sapped
+statusDuration: 65
+}
+}
+]
+research: {
+parent: sting
+requirements: [
+silicon/15000
+titanium/15000
+thorium/15000
+metaglass/13000
+plastanium/10000
+phase-fabric/1000
+]
+}

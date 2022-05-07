@@ -1,0 +1,83 @@
+health: 630
+speed: 1.75
+accel: 0.08
+drag: 0.016
+flying: true
+hitSize: 11
+engineOffset: 7.8
+range: 160
+armor: 6
+playerTargetFlags: [generator, factory, repair]
+targetFlags: [generator, factory, repair]
+commandLimit: 5
+buildSpeed: 1
+mineTier: 3
+mineSpeed: 3.5
+lowAltitude: true
+abilities: [
+{
+type: RepairFieldAbility
+amount: 8
+reload: 450
+range: 60
+}
+]
+weapons: [
+{
+name: heal-weapon-mount
+x: 3.5
+y: 2.75
+reload: 30
+recoil: 3
+shootSound: missile
+shootCone: 45
+ejectEffect: none
+inaccuracy: 5
+bullet: {
+type: MissileBulletType
+width: 7
+height: 7
+keepVelocity: false
+drag: -0.003
+shrinkY: 0
+damage: 10
+splashDamage: 25
+splashDamageRadius: 30
+speed: 6
+lifetime: 27
+trailColor: 98ffa9
+trailWidth: 3.5
+trailLength: 14
+backColor: 98ffa9
+frontColor: ffffff
+homingRange: 45
+homingPower: 0.08
+weaveScale: 8
+weaveMag: 8
+hitSound: plasmaboom
+status: electrified
+hitEffect: {
+type: ExplosionEffect
+waveRad: 30
+waveLife: 15
+waveColor: 98ffa9
+smokes: 6
+smokeSize: 6
+smokeColor: 98ffa9
+smokeRad: 35
+sparks: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 30
+waveLife: 15
+waveColor: 98ffa9
+smokes: 6
+smokeSize: 6
+smokeColor: 98ffa9
+smokeRad: 35
+sparks: 0
+}
+}
+}]
+research: case

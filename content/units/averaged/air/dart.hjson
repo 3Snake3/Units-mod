@@ -1,0 +1,47 @@
+type: flying
+flying: true
+accel: 0.05
+drag: 0.09
+armor: 2
+circleTarget: true
+health: 200
+speed: 5
+hitSize: 10
+range: 200
+targetFlags: [generator]
+playerTargetFlags: [generator]
+weapons: [{
+name: none
+x: 4
+y: -1
+reload: 9
+alternate: true
+ejectEffect: casing1
+shots: 2
+spacing: 4
+bullet: {
+type: BasicBulletType
+width: 10
+height: 13
+lifetime: 35
+speed: 7
+damage: 15
+homingPower: 0.7
+homingRange: 15
+weaveScale: 8
+weaveMag: 4
+pierce: true
+pierceBuilding: true
+pierceCap: 1
+}
+}]
+research: {
+parent: flare
+requirements: [
+graphite/6000
+silicon/6000
+titanium/4000
+metaglass/2000
+plastanium/1200
+]
+}

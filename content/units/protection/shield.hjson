@@ -1,0 +1,86 @@
+
+controller: defenderAI
+armor: 22
+health: 30000
+speed: 0.85
+rotateSpeed: 0.85
+accel: 0.03
+drag: 0.020
+flying: true
+engineOffset: 46
+engineSize: 8
+rotateShooting: false
+hitSize: 68
+buildSpeed: 5
+drawShields: false
+commandLimit: 8
+lowAltitude: true
+buildBeamOffset: 43
+ammoCapacity: 1
+abilities: [
+{
+type: ForceFieldAbility
+radius: 200
+regen: 8
+max: 8500
+cooldown: 600
+}
+{
+type: UnitSpawnAbility
+unit: safety
+spawnTime: 1200
+spawnX: 19.75
+spawnY: 0
+}
+{
+type: UnitSpawnAbility
+unit: safety
+spawnTime: 1200
+spawnX: -19.75
+spawnY: 0
+}
+]
+weapons: [
+{
+type: PointDefenseWeapon
+name: point-defense-mount
+x: 30.5
+y: 20.25
+reload: 6
+targetInterval: 8
+targetSwitchInterval: 8
+rotate: true
+bullet: {
+shootEffect: sparkShoot
+hitEffect: pointHit
+maxRange: 280
+damage: 60
+}
+}
+{
+type: PointDefenseWeapon
+name: point-defense-mount
+x: 30.5
+y: -20.25
+reload: 6
+targetInterval: 8
+targetSwitchInterval: 8
+rotate: true
+bullet: {
+shootEffect: sparkShoot
+hitEffect: pointHit
+maxRange: 280
+damage: 60
+}
+}
+]
+research: {
+parent: oct
+requirements: [
+silicon/80000
+plastanium/45000
+titanium/30000
+surge-alloy/30000
+phase-fabric/21000
+]
+}

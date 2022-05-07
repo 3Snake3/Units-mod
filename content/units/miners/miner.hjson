@@ -1,0 +1,17 @@
+flying: true
+health: 220
+armor: 5
+hitSize: 14
+speed: 1.2
+itemCapacity: 70
+itemOffsetY: 0
+controller: MinerAI
+drag: 0.06
+accel: 0.12
+engineOffset: 5.5
+engineSize: 1.5
+range: 60
+isCounted: false
+mineTier: 2
+mineSpeed: 1.8
+research: mono

@@ -1,0 +1,42 @@
+health: 100
+drag: 0.1
+speed: 3
+accel: 1.6
+range: 70
+engineSize: 1
+engineOffset: 3.75
+flying: true
+controller: RepairAI
+hitSize: 10
+weapons: [
+{
+name: spirit-heal-weapon
+x: 0
+y: 0.75
+shootY: 0
+reload: 40
+mirror: false
+top: false
+ejectEffect: none
+shootEffect: shootHeal
+shootSound: lasershoot
+bullet: {
+type: LaserBoltBulletType
+speed: 5.3
+damage: 5
+buildingDamageMultiplier: 0
+lifetime: 14
+collidesTeam: true
+healPercent: 5.5
+backColor: 98ffa9
+frontColor: ffffff
+}
+}]
+research: {
+parent: flare
+requirements: [
+lead/1200
+silicon/1200
+]
+}
+

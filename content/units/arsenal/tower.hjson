@@ -1,0 +1,74 @@
+speed: 0.40
+hitSize: 20
+rotateSpeed: 4
+health: 900
+armor: 10
+mechFrontSway: 0.55
+canBoost: true
+boostMultiplier: 2
+targetAir: false
+commandLimit: 3
+weapons: [{
+name: artillery
+x: 10.25
+y: 1
+reload: 45
+recoil: 3
+top: false
+alternate: false
+shots: 2
+spacing: 4
+inaccuracy: 8
+shootCone: 60
+shootSound: bang
+bullet: {
+type: ArtilleryBulletType
+speed: 3.2
+damage: 17
+lifetime: 90
+knockback: 0.8
+splashDamageRadius: 20
+splashDamage: 5
+width: 15
+height: 15
+collidesTiles: false
+hitShake: 3
+status: blasted
+statusDuration: 65
+}
+}
+{
+name: bullet
+x: 0
+y: 2.5
+reload: 9
+shootSound: shootSnap
+recoil: 0
+top: false
+mirror: false
+bullet: {
+type: BasicBulletType
+width: 7
+height: 9
+speed: 7
+damage: 30
+lifetime: 25
+trailChance: 1
+trailLength: 15
+trailWidth: 1
+trailColor: f9c27a
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+homingPower: 0.1
+}
+}]
+research: {
+parent: fortress
+requirements: [
+lead/28000
+graphite/28000
+silicon/25000
+titanium/25000
+thorium/20000
+]
+}

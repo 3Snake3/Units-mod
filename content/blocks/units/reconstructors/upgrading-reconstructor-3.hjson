@@ -4,17 +4,19 @@ size: 7
 constructTime: 6000
 liquidCapacity: 65
 requirements: [
-    lead/4000
+    lead/3450
     silicon/2500
-    titanium/1800
-    thorium/1600
-    plastanium/1000
-    metaglass/1000
-    phase-fabric/1100
+    titanium/800
+    thorium/800
+    plastanium/440
+    metaglass/330
+    phase-fabric/200
 ]
 
 upgrades: [
     [antumbra, twilight],
+    [quad, armor],
+    [vela, fate],
     [scepter, power]
 ]
 

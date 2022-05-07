@@ -1,0 +1,197 @@
+drag: 0.1
+speed: 0.35
+hitSize: 28
+health: 24000
+armor: 16
+lightRadius: 160
+rotateSpeed: 2.2
+drownTimeMultiplier: 2.8
+canHeal: true
+legCount: 8
+legMoveSpace: 0.8
+legPairOffset: 3
+legLength: 75
+legExtension: -20
+legBaseOffset: 8
+legLengthScl: 0.93
+rippleScale: 2.5
+legSpeed: 0.17
+buildSpeed: 3.5
+legSplashDamage: 60
+legSplashRange: 60
+hovering: true
+visualElevation: 0.95
+range: 300
+weapons: [
+{
+type: PointDefenseWeapon
+name: point-defense-mount
+x: 5.75
+y: 11.25
+reload: 6
+shootSound: lasershoot
+rotate: true
+rotateSpeed: 8
+targetInterval: 8
+targetSwitchInterval: 8
+bullet: {
+shootEffect: sparkShoot
+hitEffect: pointHit
+maxRange: 300
+damage: 60
+}
+}
+{
+name: macromate-emp-cannon
+x: 0
+y: 7.75
+mirror: false
+top: false
+reload: 180
+recoil: 4
+shootSound: laser
+shootStatus: unmoving
+shootStatusDuration: 30
+shake: 4
+bullet: {
+type: EmpBulletType
+width: 12
+height: 12
+trailLength: 20
+trailWidth: 6
+shrinkY: 0
+damage: 60
+splashDamage: 80
+splashDamageRadius: 100
+speed: 5
+lifetime: 60
+lightOpacity: 0.8
+lightColor: 98ffa9
+lightRadius: 100
+backColor: 98ffa9
+trailColor: 98ffa9
+scaleVelocity: false
+shootEffect: hitEmpSpark
+smokeEffect: shootBigSmoke2
+sprite: circle-bullet
+hitSound: plasmaboom
+status: electrified
+hitShake: 4
+healPercent: 30
+hitEffect: {
+type: WaveEffect
+sides: 0
+lifetime: 40
+sizeFrom: 100
+sizeTo: 100
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+trailEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+baseLength: -5
+region: adc-rail-hit
+lifetime: 16
+sizeFrom: 30
+sizeTo: 4
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+fragBullets: 8
+fragCone: 360
+fragBullet: {
+type: EmpBulletType
+width: 8
+height: 8
+trailLength: 15
+trailWidth: 4
+shrinkY: 0
+damage: 25
+splashDamage: 25
+splashDamageRadius: 45
+speed: 3
+lifetime: 30
+collides: false
+homingPower: 0.1
+homingRange: 60
+lightOpacity: 0.4
+lightColor: 98ffa9
+lightRadius: 60
+backColor: 98ffa9
+trailColor: 98ffa9
+scaleVelocity: false
+shootEffect: hitEmpSpark
+smokeEffect: shootBigSmoke2
+sprite: circle-bullet
+hitSound: plasmaboom
+status: electrified
+hitShake: 2
+healPercent: 15
+hitEffect: {
+type: WaveEffect
+sides: 0
+lifetime: 40
+sizeFrom: 60
+sizeTo: 60
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+trailEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+baseLength: -5
+region: adc-rail-hit
+lifetime: 16
+sizeFrom: 30
+sizeTo: 4
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+}
+}
+}
+{
+name: heal-shotgun-weapon
+x: 8.5
+y: -0.5
+alternate: true
+reload: 40
+recoil: 3
+shootSound: laser
+rotate: true
+rotateSpeed: 5
+bullet: {
+type: LaserBulletType
+length: 310
+damage: 100
+sideAngle: 45
+sideWidth: 1
+sideLength: 80
+healPercent: 10
+collidesTeam: true
+colors: [98ffa9, 98ffa9, ffffff]
+}
+}]
+abilities: [
+{
+type: RepairFieldAbility
+amount: 60
+range: 180
+reload: 120
+}
+]
+research: {
+parent: toxopid
+requirements: [
+silicon/80000
+plastanium/45000
+titanium/30000
+surge-alloy/30000
+phase-fabric/21000
+]
+}

@@ -1,0 +1,50 @@
+health: 550
+speed: 2
+accel: 0.04
+drag: 0.016
+flying: true
+range: 140
+hitSize: 20
+faceTarget: false
+circleTarget: true
+targetAir: false
+armor: 15
+targetFlags: [factory, generator]
+playerTargetFlags: [factory, generator]
+engineOffset: 12
+engineSize: 3
+weapons: [
+{
+name: sunset-bomber
+reload: 60
+x: 6
+shootY: 0
+shootCone: 180
+ejectEffect: none
+minShootVelocity: 0.75
+ignoreRotation: true
+shootSound: missile
+shots: 2
+inaccuracy: 15
+spacing: 6
+bullet: {
+splashDamage: 40
+splashDamageRadius: 40
+shrinkY: 0.4
+shrinkX: 0.4
+width: 12
+height: 12
+speed: 0
+lifetime: 15
+sprite: circle-bullet
+collides: false
+hitEffect: blastExplosion
+shootEffect: none
+smokeEffect: none
+status: blasted
+statusDuration: 60
+homingPower: 0.08
+homingRange: 45
+}
+}]
+commandLimit: 6

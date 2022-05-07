@@ -4,18 +4,19 @@ consumes: {
   power: 7
   items: {
     items: [
-    silicon/240
+    silicon/225
     titanium/180
-    metaglass/70
+    metaglass/90
+    thorium/90
     ]
   }
 }
 constructTime: 2000
 requirements: [
-  titanium/350
-  thorium/250
-  silicon/220
-  graphite/200
+  copper/440
+  titanium/200
+  silicon/200
+  thorium/115
 ]
 upgrades: [
   [arrow, sting]

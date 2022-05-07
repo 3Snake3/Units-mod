@@ -1,0 +1,38 @@
+canBoost: true
+speed: 0.5
+boostMultiplier: 0.95
+health: 250
+weapons: [{
+name: blasters
+x: 5
+y: 1.75
+top: false
+reload: 14
+alternate: true
+ejectEffect: casing1
+shootStatus: {
+name: heal
+damage: -0.16
+}
+shootStatusDuration: 60
+bullet: {
+type: BasicBulletType
+width: 11
+height: 14
+lifetime: 40
+speed: 4
+damage: 9
+inaccuracy: 5
+despawnEffect: hitBulletSmall
+}
+}]
+research: {
+parent: dagger
+requirements: [
+graphite/8000
+silicon/8000
+titanium/7500
+metaglass/5500
+plastanium/3500
+]
+}

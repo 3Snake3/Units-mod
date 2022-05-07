@@ -1,0 +1,117 @@
+hitSize: 25
+rotateSpeed: 2
+mechFrontSway: 1
+buildSpeed: 4.5
+mechStepParticles: true
+mechStepShake: 0.18
+drownTimeMultiplier: 4.5
+speed: 0.44
+boostMultiplier: 2.1
+engineOffset: 12
+engineSize: 6.3
+lowAltitude: true
+riseSpeed: 0.03
+health: 12000
+armor: 10
+canBoost: true
+landShake: 5
+immunities: [burning, blasted]
+commandLimit: 8
+singleTarget: true
+weapons: [
+{
+name: fate-weapon
+mirror: false
+top: false
+shake: 4
+shootY: 13
+x: 0
+y: 0
+firstShotDelay: 39
+reload: 155
+recoil: 0
+chargeSound: lasercharge2
+shootSound: beam
+continuous: true
+cooldownTime: 200
+shootStatus: slow
+bullet: {
+type: ContinuousLaserBulletType
+damage: 35
+length: 210
+hitEffect: hitMeltHeal
+width: 7
+drawSize: 420
+lifetime: 160
+shake: 1
+despawnEffect: smokeCloud
+smokeEffect: none
+shootEffect: greenLaserChargeSmall
+incendChance: 0.1
+incendSpread: 5
+incendAmount: 1
+healPercent: 1
+collidesTeam: true
+colors: [98ffa9, 98ffa9, 98ffa9, ffffff]
+}
+shootStatusDuration: 199
+}
+{
+type: RepairBeamWeapon
+name: repair-beam-weapon-center-large
+x: 9
+y: 1
+shootY: 6
+beamWidth: 1
+repairSpeed: 2
+bullet: {
+maxRange: 120
+}
+}
+{
+name: fate-cannon
+top: false
+y: 2
+x: 19
+shootY: 8
+reload: 60
+recoil: 5
+shake: 2
+ejectEffect: none
+shootSound: spark
+shots: 6
+inaccuracy: 3
+bullet: {
+type: LightningBulletType
+lightningLength: 20
+lightningLengthRand: 20.5
+lightningColor: 98ffa9
+shootEffect: shootHeal
+healPercent: 16
+damage: 70
+lightningType: {
+width: 12
+height: 12
+damage: 0
+speed: 0
+lifetime: 10
+lightning: 1
+collides: false
+lightningLength: 5
+lightningDamage: 5
+lightningColor: 98ffa9
+lightningCone: 180
+lightningAngle: 180
+collidesTeam: true
+healPercent: 16
+backColor: 98ffa9
+frontColor: 98ffa9
+hitEffect: shootHeal
+despawnEffect: shootHeal
+}
+}
+}]
+research: {
+parent: vela
+objectives: [scepter]
+}

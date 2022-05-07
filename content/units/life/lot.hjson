@@ -1,0 +1,122 @@
+canBoost: true
+boostMultiplier: 1.8
+speed: 0.7
+hitSize: 13
+health: 410
+buildSpeed: 0.9
+armor: 8
+riseSpeed: 0.07
+mineTier: 3
+mineSpeed: 5
+commandLimit: 7
+abilities: [
+{
+type: ShieldRegenFieldAbility
+amount: 40
+max: 80
+reload: 210
+range: 70
+}
+]
+weapons: [
+{
+name: heal-shotgun-weapon
+top: false
+x: 7
+y: 0.7
+shake: 2.2
+shootY: 2.5
+
+reload: 60
+shots: 4
+inaccuracy: 45
+shotDelay: 0.5
+spacing: 0
+ejectEffect: none
+recoil: 2.5
+shootSound: spark
+bullet: {
+type: LightningBulletType
+damage: 50
+lightningColor: 98ffa9
+lightningLength: 9
+lightningLengthRand: 12
+shootEffect: shootHeal
+healPercent: 4.5
+collidesTeam: true
+lightningType: {
+speed: 0.0001
+damage: 1
+collidesTeam: true
+healPercent: 2
+despawnEffect: none
+hitEffect: hitLancer
+lifetime: 10
+status: shocked
+statusDuration: 10
+hittable: false
+}
+}
+}
+{
+name: heal-flamethrower
+x: 5.5
+y: 0
+reload: 7
+alternate: true
+shootSound: flame
+recoil: 2
+targetInterval: 20
+targetSwitchInterval: 35
+autoTarget: true
+controllable: false
+rotate: true
+rotateSpeed: 3.5
+bullet: {
+smokeEffect: {
+type: ParticleEffect
+interp: circleOut
+particles: 15
+sizeFrom: 3
+sizeTo: 0
+lifetime: 16
+length: 70
+cone: 6
+colorFrom: ffffff
+colorTo: ffffff
+}
+shootEffect: {
+type: ParticleEffect
+particles: 30
+sizeFrom: 4
+sizeTo: 0
+lifetime: 16
+length: 70
+interp: circleOut
+cone: 6
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+hitEffect: {
+type: ParticleEffect
+particles: 18
+lifetime: 15
+length: 10
+sizeFrom: 3
+interp: circleOut
+sizeTo: 0.25
+cone: 360
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+speed: 9
+lifetime: 6.6
+damage: 45
+pierce: true
+reflectable: false
+hittable: false
+backColor: 98ffa9
+frontColor: ffffff
+}
+}
+]

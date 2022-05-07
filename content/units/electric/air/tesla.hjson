@@ -1,0 +1,150 @@
+flying: true
+health: 16000
+armor: 20
+speed: 2
+rotateSpeed: 2
+accel: 0.09
+drag: 0.09
+lowAltitude: true
+hitSize: 48
+engineOffset: 8
+engineSize: 5.75
+playerTargetFlags: [generator, reactor]
+targetFlags: [generator, reactor]
+weapons: [{
+name: tesla-missiles
+y: 10
+x: 7.75
+reload: 60
+recoil: 3
+shootSound: missile
+rotate: true
+rotateSpeed: 8
+shots: 2
+spacing: 4
+alternate: false
+ejectEffect: none
+bullet: {
+type: MissileBulletType
+width: 14
+height: 14
+speed: 6
+lifetime: 50
+damage: 30
+splashDamage: 60
+splashDamageRadius: 60
+keepVelocity: false
+drag: -0.003
+pierce: true
+pierceBuilding: true
+pierceCap: 2
+homingRange: 80
+homingPower: 0.1
+weaveMag: 4
+weaveScale: 7
+lightning: 4
+lightningLength: 8
+lightningDamage: 30
+lightningColor: f3e979
+backColor: f3e979
+trailColor: f3e979
+lightColor: f3e979
+frontColor: ffffff
+lightOpacity: 0.7
+lightRadius: 40
+hitEffect: {
+type: ExplosionEffect
+waveRad: 60
+waveLife: 15
+waveColor: f3e979
+sparkRad: 70
+sparkLen: 6
+sparkStroke: 4
+sparkColor: f3e979
+sparks: 6
+smokeRad: 70
+smokeSize: 8
+smokeColor: f3e979
+smokes: 6
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 60
+waveLife: 15
+waveColor: f3e979
+sparkRad: 70
+sparkLen: 6
+sparkStroke: 4
+sparkColor: f3e979
+sparks: 6
+smokeRad: 70
+smokeSize: 8
+smokeColor: f3e979
+smokes: 6
+}
+}
+}]
+abilities: [
+{
+type: EnergyFieldAbility
+damage: 40
+maxTargets: 5
+reload: 120
+range: 224
+hitEffect: {
+type: ExplosionEffect
+waveRad: 10
+waveLife: 20
+waveColor: f3e979
+smokes: 0
+sparks: 6
+sparkLen: 7
+sparkStroke: 3
+sparkRad: 20
+sparkColor: f3e979
+}
+status: shocked
+statusDuration: 180
+y: 19.75
+x: 12.5
+color: f3e979
+sectors: 0
+effectRadius: 3.5
+}
+{
+type: EnergyFieldAbility
+damage: 40
+maxTargets: 5
+reload: 120
+range: 224
+hitEffect: {
+type: ExplosionEffect
+waveRad: 10
+waveLife: 20
+waveColor: f3e979
+smokes: 0
+sparks: 6
+sparkLen: 7
+sparkStroke: 3
+sparkRad: 20
+sparkColor: f3e979
+}
+status: shocked
+statusDuration: 180
+y: 19.75
+x: -12.5
+color: f3e979
+sectors: 0
+effectRadius: 3.5
+}]
+research: {
+parent: discharge
+requirements: [
+silicon/45000
+thorium/40000
+titanium/34000
+metaglass/30000
+plastanium/29000
+surge-alloy/30000
+]
+}

@@ -1,0 +1,62 @@
+type: flying
+flying: true
+health: 180
+speed: 3
+accel: 0.06
+drag: 0.04
+targetAir: false
+circleTarget: true
+faceTarget: false
+hitSize: 6
+range: 140
+targetFlags: [generator, factory]
+playerTargetFlags: [generator, factory]
+weapons: [{
+name: snow-bomber
+x: 0
+y: 0
+top: false
+reload: 15
+spacing: 4
+inaccuracy: 5
+shootCone: 180
+ignoreRotation: true
+ejectEffect: none
+shootY: 0
+bullet: {
+width: 9
+height: 9
+speed: 0
+lifetime: 20
+spin: 6
+shrinkY: 0.4
+shrinkX: 0.4
+sprite: large-bomb
+damage: 0
+splashDamage: 20
+splashDamageRadius: 25
+backColor: a9d8ff
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+waveRad: 25
+waveLife: 15
+waveColor: a9d8ff
+smokes: 6
+smokeSize: 5
+smokeRad: 30
+smokeColor: a9d8ff
+}
+hitSound: explosion
+status: freezing
+}
+}]
+research: {
+parent: flare
+objectives: [special-air-factory]
+requirements: [
+lead/1500
+silicon/1500
+metaglass/650
+]
+}

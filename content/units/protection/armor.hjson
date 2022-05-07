@@ -1,0 +1,108 @@
+
+armor: 10
+health: 8000
+speed: 1
+rotateSpeed: 1.9
+accel: 0.05
+drag: 0.017
+lowAltitude: false
+flying: true
+circleTarget: true
+engineOffset: 12
+engineSize: 6
+rotateShooting: false
+drawShields: false
+hitSize: 36
+buildSpeed: 2.8
+range: 160
+targetAir: false
+faceTarget: false
+targetFlags: [battery, factory]
+weapons: [
+{
+x: 0
+y: 0
+mirror: false
+reload: 80
+minShootVelocity: 0.01
+soundPitchMin: 1
+shootSound: plasmadrop
+spacing: 90
+inaccuracy: 360
+shotDelay: 2
+shots: 4
+bullet: {
+sprite: large-bomb
+width: 30
+height: 30
+maxRange: 30
+ignoreRotation: true
+backColor: 98ffa9
+frontColor: ffffff
+mixColorTo: ffffff
+hitSound: plasmaboom
+shootCone: 360
+ejectEffect: none
+hitShake: 4
+collidesAir: false
+speed: 2
+drag: 0.03
+lifetime: 80
+shrinkX: 0.7
+shrinkY: 0.7
+despawnEffect: greenBomb
+hitEffect: massiveExplosion
+keepVelocity: false
+collides: false
+healPercent: 10
+splashDamage: 84
+splashDamageRadius: 80
+spin: 6
+fragBullets: 6
+fragCone: 360
+fragBullet: {
+width: 10
+height: 10
+speed: 3
+lifetime: 180
+drag: 0.03
+spin: 8
+damage: 0
+splashDamage: 40
+splashDamageRadius: 40
+shrinkY: 0
+collides: false
+collidesAir: false
+sprite: large-bomb
+backColor: 98ffa9
+frontColor: ffffff
+mixColorTo: ffffff
+hitSound: plasmaboom
+hitShake: 4
+hitEffect: blastExplosion
+despawnEffect: {
+type: WaveEffect
+sides: 0
+lifetime: 25
+sizeFrom: 20
+sizeTo: 40
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: ffffff
+}
+collidesTeam: true
+healPercent: 8
+}
+}
+}
+]
+abilities: [
+{
+type: RepairFieldAbility
+amount: 60
+reload: 240
+range: 100
+}
+]
+research: insurance
+

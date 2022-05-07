@@ -1,0 +1,85 @@
+type: flying
+flying: true
+health: 300
+armor: 4
+speed: 2
+hitSize: 10
+faceTarget: false
+circleTarget: true
+targetFlags: [turret, factory]
+playerTargetFlags: [turret, factory]
+range: 150
+weapons: [{
+name: arrow-blasters
+x: 3
+y: 1
+reload: 20
+recoil: 1
+alternate: true
+rotate: true
+rotateSpeed: 4
+bullet: {
+type: MissileBulletType
+sprite: units-mod-spore-bullet
+width: 8
+height: 8
+damage: 23
+speed: 6
+lifetime: 25
+splashDamage: 30
+splashDamageRadius: 15
+keepVelocity: false
+homingRange: 45
+trailChance: 1
+weaveScale: 2
+weaveMag: 6
+homingPower: 0.1
+homingRange: 60
+trailEffect: {
+type: ParticleEffect
+particles: 5
+length: -15
+sizeFrom: 3
+sizeTo: 0
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+backColor: 6d56bf
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+waveColor: 6d56bf
+smokeColor: 6d56bf
+sparkColor: bf92f9
+waveLife: 20
+waveStroke: 3
+waveRad: 15
+sparkStroke: 2
+sparkRad: 23
+sparkLen: 4
+smokeSize: 4
+smokeRad: 23
+smokes: 4
+sparks: 5
+}
+despawnHit: true
+}
+}]
+abilities: [
+{
+type: ShieldRegenFieldAbility
+amount: 15
+max: 250
+reload: 80
+range: 45
+}
+]
+research: {
+parent: arrow
+requirements: [
+lead/4000
+silicon/4000
+graphite/2500
+]
+}

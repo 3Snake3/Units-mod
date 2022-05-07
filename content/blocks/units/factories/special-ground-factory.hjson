@@ -4,17 +4,17 @@ health: 650
 size: 3
 
 requirements: [
-  graphite/45
-  silicon/30
-  titanium/10
+  graphite/85
+  silicon/60
+  titanium/60
 ]
 
 plans: [
     {
         unit: cold
         requirements: [
-            spore-pod/10
-            silicon/15
+            silicon/25
+            titanium/15
         ]
         time: 900
     }

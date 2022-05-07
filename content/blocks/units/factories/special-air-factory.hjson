@@ -4,9 +4,9 @@ health: 650
 size: 3
 
 requirements: [
+    copper/125
     lead/80
     graphite/80
-    silicon/65
 ]
 
 plans: [
@@ -19,21 +19,31 @@ plans: [
         time: 600
     }
     {
-        unit: blade
+        unit: arrow
         requirements: [
-            lead/15
+            lead/20
             silicon/20
-            graphite/10
+            titanium/10
         ]
         time: 900
     }
     {
         unit: spark
         requirements: [
-            silicon/20
-            surge-alloy/10
+            silicon/30
+            titanium/30
+            thorium/15
         ]
         time: 1400
+    }
+    {
+        unit: miner
+        requirements: [
+            silicon/40
+            graphite/40
+            lead/15
+        ]
+        time: 1200
     }
 ]
 

@@ -1,0 +1,82 @@
+speed: 0.39
+hitSize: 13
+rotateSpeed: 3
+targetAir: false
+health: 860
+armor: 6
+mechFrontSway: 0.55
+commandLimit: 4
+abilities: [{
+type: UnitSpawnAbility
+unit: spore-mass-clone
+spawnTime: 500
+spawnX: 0
+spawnY: 0
+}]
+weapons: [{
+name: sap-artillery
+top: false
+x: 10.25
+y: 3
+reload: 80
+recoil: 4
+shake: 2
+ejectEffect: casing2
+shootSound: artillery
+bullet: {
+hitEffect: {
+type: ParticleEffect
+particles: 6
+line: true
+sizeFrom: 4
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: bf92f9
+colorTo: 6d56bf
+}
+sprite: units-mod-spore-bullet
+homingRange: 60
+homingPower: 0.25
+speed: 5
+knockback: 3
+lifetime: 30
+width: 16
+height: 16
+shootEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 5
+sizeTo: 0
+strokeFrom: 0
+strokeTo: 3
+lifetime: 20
+colorFrom: 6d56bf
+colorTo: ffffff
+}
+splashDamageRadius: 40
+splashDamage: 75
+hitSound: explosion
+damage: 35
+pierce: true
+pierceBuilding: true
+backColor: 6d56bf
+frontColor: ffffff
+trailColor: 6d56bf
+hitShake: 3
+status: spore-slowed
+statusDuration: 80
+}
+}]
+research: {
+parent: flu
+requirements: [
+lead/8500
+silicon/8000
+titanium/8000
+metaglass/7800
+thorium/7500
+spore-pod/7000
+]
+}

@@ -1,12 +1,47 @@
+UnitTypes.horizon.range = 140;
+const sunset = extend(UnitType, "sunset", {});
+sunset.constructor = () => extend(UnitEntity, {});
+
+const ccase = extend(UnitType, "case", {});
+ccase.constructor = () => extend(UnitEntity, {});
+
+const solution = extendContent(UnitType, "solution", {});
+solution.constructor = () => extend(UnitEntity, {});
+
+const judge = extendContent(UnitType, "judge", {
+payloadCapacity: (2 * 2) * Vars.tilePayload
+});
+judge.constructor = () => extend(PayloadUnit, {});
+
 const knife = extendContent(UnitType, "knife", {});
 knife.constructor = () => extend(MechUnit, {});
 knife.abilities.add(new UnitSpawnAbility(UnitTypes.dagger, 1500, 0, 0));
 knife.immunities = ObjectSet.with(StatusEffects.wet, StatusEffects.muddy);
 knife.ammoType = new ItemAmmoType(Items.titanium);
 
+const axe = extendContent(UnitType, "axe", {});
+axe.constructor = () => extend(MechUnit, {});
+axe.abilities.add(new ShieldRegenFieldAbility(1, 100, 80, 60));
+axe.immunities = ObjectSet.with(StatusEffects.melting, StatusEffects.burning);
+axe.ammoType = new ItemAmmoType(Items.pyratite);
+
+const tower = extendContent(UnitType, "tower", {});
+tower.constructor = () => extend(MechUnit, {});
+tower.immunities = ObjectSet.with(StatusEffects.wet);
+tower.ammoType = new ItemAmmoType(Items.graphite);
+
+const power = extendContent(UnitType, "power", {});
+power.constructor = () => extend(MechUnit, {});
+power.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.wet);
+power.ammoType = new ItemAmmoType(Items.thorium);
+
+const hammer = extendContent(UnitType, "hammer", {});
+hammer.constructor = () => extend(MechUnit, {});
+hammer.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting, StatusEffects.wet);
+hammer.ammoType = new ItemAmmoType(Items.thorium);
+
 const dawn = extendContent(UnitType, "dawn", {});
 dawn.constructor = () => extend(UnitEntity, {});
-dawn.abilities.add(new UnitSpawnAbility(UnitTypes.flare, 800, 0, 0));
 dawn.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting);
 dawn.ammoType = new ItemAmmoType(Items.titanium);
 
@@ -30,110 +65,49 @@ twilight.ammoType = new ItemAmmoType(Items.graphite);
 
 const darkness = extendContent(UnitType, "darkness", {});
 darkness.constructor = () => extend(UnitEntity, {});
-darkness.abilities.add(new UnitSpawnAbility(UnitTypes.zenith, 3500, 0, 0));
+darkness.abilities.add(new UnitSpawnAbility(sunset, 3000, 0, 0));
 darkness.immunities = ObjectSet.with(StatusEffects.blasted, StatusEffects.burning, StatusEffects.melting);
 darkness.ammoType = new ItemAmmoType(Items.plastanium);
-
-const axe = extendContent(UnitType, "axe", {});
-axe.constructor = () => extend(MechUnit, {});
-axe.abilities.add(new ShieldRegenFieldAbility(1, 100, 80, 60));
-axe.immunities = ObjectSet.with(StatusEffects.melting, StatusEffects.burning);
-axe.ammoType = new ItemAmmoType(Items.pyratite);
-
-const guard = extendContent(UnitType, "guard", {});
-guard.constructor = () => extend(MechUnit, {});
-guard.immunities = ObjectSet.with(StatusEffects.melting, StatusEffects.burning);
-guard.ammoType = new ItemAmmoType(Items.blastCompound);
-
-const tower = extendContent(UnitType, "tower", {});
-tower.constructor = () => extend(MechUnit, {});
-tower.immunities = ObjectSet.with(StatusEffects.wet);
-tower.ammoType = new ItemAmmoType(Items.graphite);
-
-const power = extendContent(UnitType, "power", {});
-power.constructor = () => extend(MechUnit, {});
-power.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.wet);
-power.abilities.add(new StatusFieldAbility(StatusEffects.overdrive, 100, 80, 80));
-power.ammoType = new ItemAmmoType(Items.thorium);
-
-const world = extendContent(UnitType, "world", {});
-world.constructor = () => extend(MechUnit, {});
-world.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting, StatusEffects.wet);
-world.abilities.add(new StatusFieldAbility(StatusEffects.boss, 100, 80, 1));
-world.ammoType = new ItemAmmoType(Items.thorium);
-
-const rapics = extendContent(UnitType, "rapics", {});
-rapics.constructor = () => extend(LegsUnit, {});
-rapics.abilities.add(new MoveLightningAbility(30, 12, 20, 0, 0.75, 1.5, Color.valueOf("bf92f9")));
-rapics.groudLayer = Layer.legUnit - 1;
-rapics.ammoType = new PowerAmmoType(850);
-
-
-const crown = extendContent(UnitType, "crown", {});
-crown.constructor = () => extend(UnitEntity, {});
-crown.abilities.add(new ShieldRegenFieldAbility(10, 100, 80, 70));
-crown.immunities = ObjectSet.with(StatusEffects.melting, StatusEffects.burning, StatusEffects.wet, StatusEffects.freezing, StatusEffects.sapped);
-crown.ammoType = new ItemAmmoType(Items.sporePod);
-
-const glaive = extendContent(UnitType, "glaive", {});
-glaive.constructor = () => extend(UnitEntity, {});
-glaive.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 30, 130, 80));
-glaive.immunities = ObjectSet.with(StatusEffects.burning);
-glaive.ammoType = new ItemAmmoType(Items.pyratite);
-
-const totem = extendContent(UnitType, "totem", {});
-totem.constructor = () => extend(MechUnit, {});
-totem.abilities.add(new RepairFieldAbility(7, 70, 80));
-totem.immunities = ObjectSet.with(StatusEffects.wet, StatusEffects.freezing, StatusEffects.muddy);
-totem.ammoType = new PowerAmmoType(800);
-
-const sting = extendContent(UnitType, "sting", {});
-sting.constructor = () => extend(UnitEntity, {});
-sting.abilities.add(new ShieldRegenFieldAbility(5, 100, 80, 70));
-sting.immunities = ObjectSet.with(StatusEffects.freezing);
-sting.ammoType = new ItemAmmoType(Items.sporePod);
-
-const sickle = extendContent(UnitType, "sickle", {});
-sickle.constructor = () => extend(UnitEntity, {});
-sickle.abilities.add(new UnitSpawnAbility(crown, 2100, 0, 0));
-sickle.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.sapped);
-sickle.ammoType = new ItemAmmoType(Items.sporePod);
-
-const scythe = extendContent(UnitType, "scythe", {});
-scythe.constructor = () => extend(UnitEntity, {});
-scythe.immunities = ObjectSet.with(StatusEffects.unmoving, StatusEffects.freezing, StatusEffects.sapped);
-scythe.ammoType = new ItemAmmoType(Items.sporePod);
 
 const blaster = extendContent(UnitType, "blaster", {});
 blaster.constructor = () => extend(MechUnit, {});
 blaster.abilities.add(new RepairFieldAbility(4, 30, 30), new ShieldRegenFieldAbility(2, 20, 30, 40));
 blaster.ammoType = new ItemAmmoType(Items.coal);
 
-const mantle = extendContent(UnitType, "mantle", {});
-mantle.constructor = () => extend(UnitEntity, {});
-mantle.abilities.add(new ForceFieldAbility(50, 0.2, 60, 60), new ShieldRegenFieldAbility(8, 60, 45, 70), new UnitSpawnAbility(UnitTypes.crawler, 1200, 0, 0));
-mantle.immunities = ObjectSet.with(StatusEffects.unmoving, StatusEffects.freezing);
-mantle.ammoType = new ItemAmmoType(Items.coal);
+const guard = extendContent(UnitType, "guard", {});
+guard.constructor = () => extend(MechUnit, {});
+guard.immunities = ObjectSet.with(StatusEffects.melting, StatusEffects.burning);
+guard.ammoType = new ItemAmmoType(Items.blastCompound);
 
-const vano = extendContent(UnitType, "vano", {});
-vano.constructor = () => extend(UnitEntity, {});
-vano.defaultController = () => extend(MinerAI, {});
+const glaive = extendContent(UnitType, "glaive", {});
+glaive.constructor = () => extend(UnitEntity, {});
+glaive.immunities = ObjectSet.with(StatusEffects.burning);
+glaive.ammoType = new ItemAmmoType(Items.pyratite);
 
-vano.flying = true;
-vano.drag = 0.06;
-vano.accel = 0.12;
-vano.speed = 1.5;
-vano.health = 200;
-vano.engineSize = 1.8;
-vano.engineOffSet = 5.7;
-vano.range = 60;
-vano.itemCapacity = 40;
-vano.isCounted = false;
-vano.ammoType = new PowerAmmoType(500);
-vano.mineTier = 4;
-vano.mineSpeed = 4;
+const rapics = extendContent(UnitType, "rapics", {});
+rapics.constructor = () => extend(LegsUnit, {});
+rapics.groudLayer = Layer.legUnit - 1;
+rapics.ammoType = new PowerAmmoType(850);
 
-vano.abilities.add(new RepairFieldAbility(5, 60, 50));
+const scales = extendContent(UnitType, "scales", {});
+scales.constructor = () => extend(UnitEntity, {});
+scales.defaultController = () => extend(MinerAI, {});
+
+scales.flying = true;
+scales.drag = 0.06;
+scales.accel = 0.12;
+scales.speed = 1.5;
+scales.health = 200;
+scales.engineSize = 1.8;
+scales.engineOffSet = 5.7;
+scales.range = 60;
+scales.itemCapacity = 40;
+scales.isCounted = false;
+scales.ammoType = new PowerAmmoType(500);
+scales.mineTier = 4;
+scales.mineSpeed = 4;
+
+scales.abilities.add(new RepairFieldAbility(5, 60, 50));
 
 const bullet = extend(MissileBulletType, {});
 bullet.speed = 5;
@@ -172,43 +146,103 @@ const builder = extendContent(StatusEffect, "builder", {});
 builder.speedMultiplier = 1.5;
 builder.buildSpeedMultiplier = 1.5;
 builder.healthMultiplier = 1.5;
+builder.show = false;
+builder.activeEffect = Fx.none;
 
-const pal = extendContent(UnitType, "pal", {});
-pal.constructor = () => extend(UnitEntity, {});
-pal.defaultController = () => extend(BuilderAI, {});
+const safety = extendContent(UnitType, "safety", {});
+safety.constructor = () => extend(UnitEntity, {});
+safety.defaultController = () => extend(BuilderAI, {});
 
-pal.ammoType = new PowerAmmoType(850);
-pal.flying = true;
-pal.drag = 0.05;
-pal.speed = 3;
-pal.rotateSpeed = 20;
-pal.accel = 0.1;
-pal.range = 200;
-pal.health = 550;
-pal.buildSpeed = 2;
-pal.engineOffset = 6.5;
-pal.hitSize = 13;
-pal.lowAltitude = true;
-pal.mineTier = 3;
-pal.mineSpeed = 5;
+safety.ammoType = new PowerAmmoType(850);
+safety.flying = true;
+safety.drag = 0.05;
+safety.speed = 3;
+safety.rotateSpeed = 20;
+safety.accel = 0.1;
+safety.range = 200;
+safety.health = 550;
+safety.buildSpeed = 2;
+safety.engineOffset = 6.5;
+safety.hitSize = 13;
+safety.lowAltitude = true;
+safety.mineTier = 3;
+safety.mineSpeed = 5;
 
-pal.abilities.add(new RepairFieldAbility(20, 450, 70), new StatusFieldAbility(builder, 65, 80, 15));
-pal.weapons.add(weapon);
+safety.abilities.add(new RepairFieldAbility(20, 450, 70), new StatusFieldAbility(builder, 65, 80, 15));
+safety.weapons.add(weapon);
 
-const magno = extendContent(UnitType, "magno", {});
-magno.constructor = () => extend(UnitEntity, {});
-magno.defaultController = () => extend(RepairAI, {});
-magno.payloadCapacity = 2;
-magno.ammoType = new PowerAmmoType(1250);
-magno.abilities.add(new RepairFieldAbility(30, 600, 100));
-magno.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.burning, StatusEffects.wet);
+const insurance = extendContent(UnitType, "insurance", {});
+insurance.constructor = () => extend(PayloadUnit, {});
+insurance.defaultController = () => extend(RepairAI, {});
+insurance.payloadCapacity = (2 * 2) * Vars.tilePayload;
+insurance.ammoType = new PowerAmmoType(1250);
+insurance.abilities.add(new RepairFieldAbility(30, 600, 100));
+insurance.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.burning, StatusEffects.wet);
 
-const trident = extendContent(UnitType, "trident", {});
-trident.constructor = () => extend(UnitEntity, {});
-trident.payloadCapacity = 1;
-trident.ammoType = new PowerAmmoType(700);
-trident.abilities.add(new RepairFieldAbility(30, 600, 100), new ForceFieldAbility(30, 0.1, 50, 80));
-trident.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.wet);
+const armor = extendContent(UnitType, "armor", {
+payloadCapacity: (3 * 3) * Vars.tilePayload
+});
+armor.constructor = () => extend(PayloadUnit, {});
+
+const shield = extendContent(UnitType, "shield", {
+payloadCapacity: (5.3* 5.3) * Vars.tilePayload
+});
+shield.constructor = () => extend(PayloadUnit, {});
+
+const miner = extend(UnitType, "miner", {
+mineItems: Seq.with(Items.coal)
+});
+miner.constructor = () => extend(UnitEntity, {});
+
+const volition = extend(UnitType, "volition", {});
+volition.ammoType = new PowerAmmoType(800);
+volition.constructor = () => extend(MechUnit, {});
+
+const lot = extend(UnitType, "lot", {});
+lot.ammoType = new PowerAmmoType(1800);
+lot.constructor = () => extend(MechUnit, {});
+
+const burden = extend(UnitType, "burden", {});
+burden.ammoType = new PowerAmmoType(2800);
+burden.constructor = () => extend(MechUnit, {});
+
+const fate = extend(UnitType, "fate", {});
+fate.abilities.add(new RepairFieldAbility(125, 120, 70), new ShieldRegenFieldAbility(100, 200, 200, 50));
+fate.ammoType = new PowerAmmoType(3350);
+fate.constructor = () => extend(MechUnit, {});
+
+const challenge = extend(UnitType, "challenge", {});
+challenge.ammoType = new PowerAmmoType(5500);
+challenge.groundLayer = Layer.legUnit;
+challenge.constructor = () => extend(LegsUnit, {});
+
+const macromate = extend(UnitType, "macromate", {});
+macromate.ammoType = new PowerAmmoType(4500);
+macromate.groundLayer = Layer.legUnit;
+macromate.constructor = () => extend(LegsUnit, {});
+
+const crown = extendContent(UnitType, "crown", {});
+crown.constructor = () => extend(UnitEntity, {});
+crown.abilities.add(new ShieldRegenFieldAbility(10, 100, 80, 70));
+crown.immunities = ObjectSet.with(StatusEffects.melting, StatusEffects.burning, StatusEffects.wet, StatusEffects.freezing, StatusEffects.sapped);
+crown.ammoType = new ItemAmmoType(Items.sporePod);
+
+const sting = extendContent(UnitType, "sting", {});
+sting.constructor = () => extend(UnitEntity, {});
+sting.abilities.add(new ShieldRegenFieldAbility(5, 100, 80, 70));
+sting.immunities = ObjectSet.with(StatusEffects.freezing);
+sting.ammoType = new ItemAmmoType(Items.sporePod);
+
+const sickle = extendContent(UnitType, "sickle", {});
+sickle.constructor = () => extend(UnitEntity, {});
+sickle.abilities.add(new UnitSpawnAbility(crown, 2100, 0, 0));
+sickle.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.sapped);
+sickle.ammoType = new ItemAmmoType(Items.sporePod);
+
+const scythe = extendContent(UnitType, "scythe", {});
+scythe.constructor = () => extend(UnitEntity, {});
+scythe.immunities = ObjectSet.with(StatusEffects.unmoving, StatusEffects.freezing, StatusEffects.sapped);
+scythe.ammoType = new ItemAmmoType(Items.sporePod);
 
 const flu = extendContent(UnitType, "flu", {});
 flu.constructor = () => extend(MechUnit, {});
@@ -217,31 +251,18 @@ flu.ammoType = new ItemAmmoType(Items.sporePod);
 
 const infection = extendContent(UnitType, "infection", {});
 infection.constructor = () => extend(MechUnit, {});
-infection.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting, StatusEffects.sapped, StatusEffects.wet);
-infection.abilities.add(new ForceFieldAbility(60, 0.2, 250, 240));
+infection.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.sapped,  StatusEffects.sporeSlowed);
 
 const epidemic = extendContent(UnitType, "epidemic", {});
 epidemic.constructor = () => extend(MechUnit, {});
-epidemic.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting, StatusEffects.sapped,  StatusEffects.wet);
-epidemic.abilities.add(new UnitSpawnAbility(flu, 1000, 20, 0), new UnitSpawnAbility(flu, 1000, -20, 0));
+epidemic.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.sapped,  StatusEffects.sporeSlowed);
 
 const pandemic = extendContent(UnitType, "pandemic", {});
 pandemic.constructor = () => extend(MechUnit, {});
-pandemic.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting, StatusEffects.sapped,  StatusEffects.wet);
-pandemic.abilities.add(new UnitSpawnAbility(infection, 2000, 0, 0));
+pandemic.immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.sapped,  StatusEffects.sporeSlowed);
 
 const chill = extendContent(UnitType, "chill", {});
 chill.constructor = () => extend(UnitEntity, {});
-chill.abilities.add(new StatusFieldAbility(StatusEffects.freezing, 120, 35, 40));
-
-const glacier = extendContent(UnitType, "glacier", {});
-glacier.constructor = () => extend(UnitEntity, {});
-glacier.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.unmoving);
-glacier.abilities.add(new StatusFieldAbility(StatusEffects.freezing, 180, 40, 60), new UnitSpawnAbility(chill, 900, -8, -8), new UnitSpawnAbility(chill, 900, 8, -8));
-
-const ss = extendContent(UnitType, "snowstorm", {});
-ss.constructor = () => extend(UnitEntity, {});
-ss.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.unmoving);
 
 const iceclone = extendContent(UnitType, "ice-clone", {});
 iceclone.constructor = () => extend(UnitEntity, {});
@@ -261,6 +282,14 @@ iceclone.engineSize = 3;
 const icehail = extendContent(UnitType, "ice-hail", {});
 icehail.constructor = () => extend(UnitEntity, {});
 icehail.abilities.add(new UnitSpawnAbility(iceclone, 700, 0, 0));
+
+const glacier = extendContent(UnitType, "glacier", {});
+glacier.constructor = () => extend(UnitEntity, {});
+glacier.immunities = ObjectSet.with(StatusEffects.freezing);
+
+const ss = extendContent(UnitType, "snowstorm", {});
+ss.constructor = () => extend(UnitEntity, {});
+ss.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.unmoving);
 
 var minSpd = 1.1;
 var maxSpd = 2.2;
@@ -283,3 +312,13 @@ discharge.ammoType = new PowerAmmoType(1500);
 const tesla = extendContent(UnitType, "tesla", {});
 tesla.constructor = () => extend(UnitEntity, {});
 tesla.ammoType = new PowerAmmoType(2000);
+
+const thunder = extend(UnitType, "thunder", {});
+thunder.ammoType = new PowerAmmoType(3350);
+thunder.constructor = () => extend(UnitEntity, {});
+
+const sporeBuff = extend(StatusEffect, "spore-buff", {
+	reloadMultiplier: 1.25,
+	damageMultiplier: 1.25,
+	show: false,
+});
