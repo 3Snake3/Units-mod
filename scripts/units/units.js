@@ -19,7 +19,6 @@ knife.abilities.add(new UnitSpawnAbility(UnitTypes.dagger, 1500, 0, 0));
 knife.immunities = ObjectSet.with(StatusEffects.wet, StatusEffects.muddy);
 knife.ammoType = new ItemAmmoType(Items.titanium);
 
-
 const axe = extendContent(UnitType, "axe", {});
 axe.constructor = () => extend(MechUnit, {});
 axe.abilities.add(new ShieldRegenFieldAbility(1, 100, 80, 60));
