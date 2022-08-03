@@ -3,5 +3,6 @@ description: "Adds a new fractions of units like: Snow, Electrical, Spore, Blade
 displayName: "Units Mod"
 author: "Snake"
 minGameVersion: "135"
-version: " new 2.0"
+version: "2.0"
 dependencies: ["adc"]
+hideBrowser: true
